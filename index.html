@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YingXing Cheng's Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main-content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .main-content h1, .main-content h2, .main-content h3 {
+            color: #333;
+        }
+        .main-content p {
+            color: #666;
+        }
+        .photo {
+            float: right;
+            margin: 0 0 10px 10px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+        }
+        .research-item {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>YingXing Cheng</h1>
+                <p>PhD Degree in Physics</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#software">Software</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#languages">Languages</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#references">References</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <section id="intro">
+            <img src="pictures/yingxing.jpg" alt="YingXing Cheng" class="photo" width="150">
+            <h1>Welcome to My Homepage</h1>
+            <p>Development of frequency-dependent polarizable force fields, Time-Dependent Density Functional Theory (TDDFT), Computational Material Science, Software Engineering, and Machine Learning.</p>
+        </section>
+
+        <section id="contact-info">
+            <h2>Contact Information</h2>
+            <p><i class="fas fa-calendar-alt"></i> 1994-06-08</p>
+            <p><i class="fas fa-mobile-alt"></i> +32-494878786</p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/yingxingcheng">@yingxingcheng</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:yingxing.cheng@ugent.be">yingxing.cheng@ugent.be</a></p>
+        </section>
+
+        <section id="education" class="section">
+            <h2>Education</h2>
+            <p><strong>2019-2023:</strong> PhD Degree, Faculty of Science: Physics, Ghent University, Ghent, Belgium</p>
+            <p><strong>2016-2019:</strong> Master's Degree, Materials Science and Engineering, Beihang University (BUAA), Beijing, China (GPA: 3.60 of 4.00)</p>
+            <p><strong>2012-2016:</strong> Bachelor's Degree, Materials Science and Engineering, Huazhong University of Science and Technology (HUST), Wuhan, China (GPA: 3.72 of 4.00)</p>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>Research Experience</h2>
+            <div class="research-item">
+                <h3>2020-2023</h3>
+                <p><strong>Development of Frequency-Dependent Polarizable Force Field: ACKS2\(\omega\) Model</strong></p>
+                <p>Created ACKS2\(\omega\), a frequency-dependent extension of the polarizable force field ACKS2, for predicting dynamical response properties of finite systems. Validated the method's accuracy by evaluating absorption spectra of 42 organic and inorganic molecular monomers, showing good agreement with time-dependent density functional theory (TDDFT) calculations. Computed \(C_6\) dispersion coefficients, closely reproducing TDDFT reference values. The parameters in this model are computed as simple expectation values of an electronic wavefunction, and the hardness matrix is entirely reused from ACKS2 using an adiabatic approximation. These findings confirm that ACKS2\(\omega\) provides a solid connection between quantum-mechanical descriptions of frequency-dependent response and computationally efficient force-field models.</p>
+            </div>
+            <div class="research-item">
+                <h3>2020-2023</h3>
+                <p><strong>Deriving ACKS2\(\omega\) Model from TDDFT: A Rigorous Approach</strong></p>
+                <p>Developed a new method for deriving the ACKS2\(\omega\) model based on TDDFT. Introduced an atom-condensed TDDFT method, referred to as acTDDFT, which can be employed to compute UV-vis spectra for very large molecules.</p>
+            </div>
+            <div class="research-item">
+                <h3>2020-2023</h3>
+                <p><strong>Investigating the Role of Fluctuating Charges in Molecular Linear-Response Properties Using ACKS2\(\omega\) Model</strong></p>
+                <p>Explored the contribution of fluctuating charges to the dynamic linear response properties of finite systems, focusing on dipole polarizability (\(\alpha\)) and \(C_6\) dispersion coefficients. Discovered that fluctuating charges are the dominant contributor to molecular \(\alpha\) anisotropy, with charge transfer playing a significant role in long-chain or \(\pi\)-conjugated systems. For anisotropic \(C_6\) coefficients, fluctuating charges contribute significantly, while dipole-dipole interactions mainly compensate for anisotropy. These findings offer insights into the role of fluctuating charges in determining dynamic linear-response properties and contribute to the development of accurate polarizable force fields.</p>
+            </div>
+            <div class="research-item">
+                <h3>2019-2020</h3>
+                <p><strong>Comprehensive Database of Atomic Dipole Polarizabilities with Relativistic and Correlation Effects Using DIRAC Program: ACKS2\(\omega\) Parameterizations</strong></p>
+                <p>Applied the finite-field method to calculate static dipole polarizability for main-group and transition-metal elements. Demonstrated that scalar-relativistic effects are predominant for Groups 1-2 and 11-12 elements, while spin-orbit coupling effects are negligible in dipole polarizability calculations across all groups, except for Groups 13-18. Gained insights into the fundamental properties of main-group and transition-metal elements, emphasizing the importance of accounting for various factors in dipole polarizability calculations. This work can be used to parameterize ACKS2\(\omega\) for polarizable force field development.</p>
+            </div>
+            <div class="research-item">
+                <h3>2017-2018</h3>
+                <p><strong>Developed a Framework Combining Genetic Algorithm and Cluster Expansion Method for Predicting Atomic Structures of Materials with Point Defects</strong></p>
+                <p>As the leading developer, designed a framework combining genetic algorithm, cluster expansion (CE) method and first-principles supercell method called "pyGACE" that can effectively locate the ground-state or metastable states of point-defect-containing materials, including alloyed/doped systems. The efficiency of pyGACE was demonstrated by searching for stable structures of two systems, i.e., oxygen-vacancy-containing \(\mathrm{HfO}_{2-x}\) and Nb-doped \(\mathrm{SrTi}_{1-x}\mathrm{Nb}_x\mathrm{O}_3\), and identifying more stable structures than those available in the literature.</p>
+            </div>
+            <div class="research-item">
+                <h3>2017-2018</h3>
+                <p><strong>Developed an Automatic Workflow of Vacancy-Formation-Energy Calculation and Bonding-Environment Analysis Using ANN</strong></p>
+                <p>As the leading developer, designed a framework for automatically computing vacancy-formation energies (\(E_f\)) and analyzing the bonding environment concealed in \(E_f\) using an artificial-neural-network (ANN) method. Ge vacancy in phase-change memory material GeTe was used as a case study, and contributions of different bondings to the energy of the system were obtained, based on which the bonding between atoms was further analyzed.</p>
+            </div>
+            <div class="research-item">
+                <h3>2016-2017</h3>
+                <p><strong>Studied the Electronic Structure of Strongly Reduced (\(\overline{1}11\)) Surface of Monoclinic HfO\(_2\)</strong></p>
+                <p>Using first-principles calculations, the surface oxygen-vacancies (Vos) induced electronic-structure variation of HfO\(_2\) was studied to explore its potential applications in surface-controlled electronic devices. Through comprehensive calculations of Vos formation energies and electronic structure analysis, a conductivity-stability dilemma of the Vo-chains was found, providing a guideline for understanding and designing electronic devices based on HfO\(_2\) surface.</p>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>Published Papers</h2>
+            <p><strong>[1] YingXing Cheng, Toon Verstraelen.</strong> The significance of fluctuating charges for molecular polarizability and dispersion coefficients. <em>J. Chem. Phys.</em> 159, 094111, (2023).</p>
+            <p><strong>[2] YingXing Cheng, Toon Verstraelen.</strong> A new framework for frequency-dependent polarizable force fields. <em>J. Chem. Phys.</em> 157, 124106, (2022).</p>
+            <p><strong>[3] YingXing Cheng, Linggnag Zhu, Guanjie Wang, Jian Zhou, and Zhimei Sun.</strong> Vacancy formation energy and its connection with bonding environment in solid: A high-throughput calculation and machine learning study. <em>Comput. Mater. Sci.</em> 183, 109803, (2020).</p>
+            <p><strong>[4] YingXing Cheng, Linggang Zhu, Jian Zhou, and Zhimei Sun.</strong> pyGACE: Combining the genetic algorithm and cluster expansion methods to predict the ground-state structure of systems containing point defects. <em>Comput. Mater. Sci.</em> 174, 109482, (2020).</p>
+            <p><strong>[5] YingXing Cheng, Linggang Zhu, Yile Ying, Jian Zhou, and Zhimei Sun.</strong> Electronic structure of strongly reduced (\(\overline{1}11\)) surface of monoclinic HfO\(_2\). <em>Appl. Surf. Sci.</em> 447, 618, (2018).</p>
+        </section>
+
+        <section id="unpublished-papers" class="section">
+            <h2>Unpublished Papers</h2>
+            <p><strong>[1] YingXing Cheng, Toon Verstraelen.</strong> Breaking Limits: New Methods for Developing Accurate Polarizable Force Fields. (2023)</p>
+            <p><strong>[2] YingXing Cheng, Toon Verstraelen.</strong> Exploring the Dominant Factors in Dipole Polarizability Calculations for Main-Group and Transition-Metal Elements. (2023)</p>
+        </section>
+
+        <section id="software" class="section">
+            <h2>Software Development</h2>
+            <p><strong>Developed a package that calculates long-range correlation energy</strong>, taking into account charge and dipoles. The package includes implementations for all ACKS2\(\omega\) variants, as well as <em>ab-initio</em> implementations such as HFsrDFT and various RPA energy models. While the package is not yet open-source, it can be made available upon request. <a href="https://github.com/yingxingcheng/LRC-CD">GitHub Repository</a></p>
+            <p><strong>Designed several Python projects</strong> as an assistant for the Bachelor's course "Python for Scientists". <a href="https://github.com/yingxingcheng/py4sci-projects">GitHub Repository</a></p>
+            <p><strong>Developed a short-range DFT xc functional</strong> (Python + Fortran + f2py). <a href="https://github.com/yingxingcheng/short-range-xc-functionals">GitHub Repository</a></p>
+            <p><strong>Developed a Python wrapper for the DIRAC program</strong>, which is used for high-precision quantum chemical calculations. The wrapper provides an easy-to-use interface for performing complex calculations and analyzing results. <a href="https://github.com/yingxingcheng/pydirac">GitHub Repository</a></p>
+            <p><strong>Developed PyGACE</strong>, a Python package combining genetic algorithms and cluster expansion method. <a href="https://github.com/yingxingcheng/pygace">GitHub Repository</a></p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>Technical Skills</h2>
+            <p><strong>SOFTWARE:</strong> Dalton, Gaussian, DIRAC, PySCF, PSI4, VASP, ATAT, LAMMPS, Pymatgen, Atomate, Horton</p>
+            <p><strong>SCRIPTING:</strong> Python, Fortran, C++, C</p>
+        </section>
+
+        <section id="languages" class="section">
+            <h2>Languages</h2>
+            <p><strong>CHINESE:</strong> Native</p>
+            <p><strong>ENGLISH:</strong> Fluent</p>
+        </section>
+
+        <section id="awards" class="section">
+            <h2>Personal Awards</h2>
+            <p><strong>2018:</strong> National Scholarship, Beihang University, Beijing, China</p>
+            <p><strong>2016:</strong> Outstanding Graduates, Huazhong University of Science and Technology, Wuhan, China</p>
+            <p><strong>2014:</strong> National Scholarship, Merit Student, Huazhong University of Science and Technology, Wuhan, China</p>
+            <p><strong>2013:</strong> Merit Student, Excellent Student Cadre, Huazhong University of Science and Technology, Wuhan, China</p>
+            <p><strong>2012:</strong> Excellent Student Cadre, Huazhong University of Science and Technology, Wuhan, China</p>
+        </section>
+
+        <section id="internship" class="section">
+            <h2>Internship Experience</h2>
+            <p><strong>Software Engineer</strong> at Beijing Situ Technology Co., Ltd., Beijing, China (2017/03 - 2017/09)</p>
+            <p>Development of GUI applications by using C++ and Qt library.</p>
+            <p><strong>Web Developer</strong> at Wuhan Qixiu Network Technology Co., Ltd., Wuhan, China (2015/12 - 2016/02)</p>
+            <p>Development of web applications by using PHP and Yii2 framework.</p>
+        </section>
+
+        <section id="references" class="section">
+            <h2>References</h2>
+            <p><strong>Prof. Dr. Toon Verstraelen</strong>, Ghent University, Ghent, Belgium. <a href="mailto:toon.verstraelen@ugent.be">toon.verstraelen@ugent.be</a></p>
+            <p><strong>Prof. Dr. Linggang Zhu</strong>, BUAA, Beijing, China. <a href="mailto:lgzhu7@buaa.edu.cn">lgzhu7@buaa.edu.cn</a></p>
+            <p><strong>Prof. Dr. Zhimei Sun</strong>, BUAA, Beijing, China. <a href="mailto:zmsun@buaa.edu.cn">zmsun@buaa.edu.cn</a></p>
+            <p><strong>Prof. Dr. Bin Shan</strong>, HUST, Wuhan, China. <a href="mailto:bshan@mail.hust.edu.cn">bshan@mail.hust.edu.cn</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 YingXing Cheng. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
