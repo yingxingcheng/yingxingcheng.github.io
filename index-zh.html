@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>程影星的主页</title>
+    <title>YingXing Cheng's Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -52,12 +52,47 @@
         .main-content p {
             color: #666;
         }
-        .photo {
-            float: right;
-            margin: 0 0 10px 10px;
+        .intro {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .intro img {
+            border: 2px solid #333;
+            margin-left: 20px;
+        }
+        .intro .details {
+            flex-grow: 1;
+        }
+        .intro h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .intro h2 {
+            font-size: 1.5em;
+            font-weight: normal;
+            color: gray;
+            margin: 10px 0;
+        }
+        .intro .contact-info {
+            font-size: 1em;
+            margin: 10px 0;
+        }
+        .intro .contact-info p {
+            margin: 5px 0;
+        }
+        .intro .quote {
+            font-size: 1.2em;
+            color: #00008b;
         }
         .section {
             margin-bottom: 40px;
+        }
+        .education, .experience, .publications, .software, .skills, .languages, .awards, .internship, .references {
+            margin-bottom: 20px;
+        }
+        .research-item {
+            margin-bottom: 20px;
         }
         footer {
             background: #333;
@@ -70,19 +105,12 @@
             color: #333;
             text-decoration: none;
         }
-        .research-item {
-            margin-bottom: 20px;
-        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="container">
-            <div id="branding">
-                <h1>程影星</h1>
-                <p>物理学博士</p>
-            </div>
             <nav>
                 <ul>
                     <li><a href="#education">教育经历</a></li>
@@ -91,8 +119,8 @@
                     <li><a href="#software">软件开发</a></li>
                     <li><a href="#skills">技能</a></li>
                     <li><a href="#languages">语言</a></li>
-                    <li><a href="#awards">奖励</a></li>
-                    <li><a href="#references">参考</a></li>
+                    <li><a href="#awards">获奖经历</a></li>
+                    <li><a href="#references">推荐人</a></li>
                     <li><a href="index.html">English</a></li>
                 </ul>
             </nav>
@@ -100,28 +128,30 @@
     </header>
 
     <div class="container main-content">
-        <section id="intro">
-            <img src="pictures/yingxing.jpg" alt="程影星" class="photo" width="150">
-            <h1>欢迎来到我的主页</h1>
-            <p>开发频率依赖极化力场、时间依赖密度泛函理论（TDDFT）、计算材料科学、软件工程和机器学习。</p>
+        <section id="intro" class="intro">
+            <div class="details">
+                <h1>程影星</h1>
+                <h2>物理学博士</h2>
+                <div class="contact-info">
+                    <p><i class="fas fa-calendar-alt"></i> 1994-06-08</p>
+                    <!-- <p><i class="fas fa-mobile-alt"></i> +32-494878786</p> -->
+                    <p><i class="fab fa-github"></i> <a href="https://github.com/yingxingcheng">@yingxingcheng</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:yingxing.cheng@mathematik.uni-stuttgart.de">yingxing.cheng@mathematik.uni-stuttgart.de</a></p>
+                </div>
+                <p class="quote">
+                    分子力场，含时密度泛函理论，计算材料学，软件工程，机器学习.</p>
+            </div>
+            <img src="pictures/yingxing.jpg" alt="YingXing Cheng" width="150">
         </section>
 
-        <section id="contact-info">
-            <h2>联系方式</h2>
-            <p><i class="fas fa-calendar-alt"></i> 1994-06-08</p>
-            <p><i class="fas fa-mobile-alt"></i> +32-494878786</p>
-            <p><i class="fab fa-github"></i> <a href="https://github.com/yingxingcheng">@yingxingcheng</a></p>
-            <p><i class="fas fa-envelope"></i> <a href="mailto:yingxing.cheng@ugent.be">yingxing.cheng@ugent.be</a></p>
-        </section>
-
-        <section id="education" class="section">
+        <section id="education" class="section education">
             <h2>教育经历</h2>
             <p><strong>2019-2023:</strong> 物理学博士学位，根特大学，根特，比利时</p>
-            <p><strong>2016-2019:</strong> 材料科学与工程硕士学位，北京航空航天大学 (BUAA)，北京，中国 (GPA: 3.60 of 4.00)</p>
-            <p><strong>2012-2016:</strong> 材料科学与工程学士学位，华中科技大学 (HUST)，武汉，中国 (GPA: 3.72 of 4.00)</p>
+            <p><strong>2016-2019:</strong> 材料科学与工程硕士学位，北京航空航天大学 (BUAA)，北京，中国 (绩点: 3.60/4.00)</p>
+            <p><strong>2012-2016:</strong> 材料科学与工程学士学位，华中科技大学 (HUST)，武汉，中国 (绩点: 3.72/4.00)</p>
         </section>
 
-        <section id="experience" class="section">
+        <section id="experience" class="section experience">
             <h2>研究经历</h2>
             <div class="research-item">
                 <h3>2020-2023</h3>
@@ -155,27 +185,27 @@
             </div>
             <div class="research-item">
                 <h3>2016-2017</h3>
-                <p><strong>研究了单斜\(\ce{HfO2}\)强还原($\overline{1}11$)表面的电子结构</strong></p>
+                <p><strong>研究了单斜\(\ce{HfO2}\)强还原(\(\overline{1}11\))表面的电子结构</strong></p>
                 <p>使用第一性原理计算研究了表面氧空位（Vos）引起的\(\ce{HfO2}\)电子结构变化，以探索其在表面控制的电子设备中的潜在应用。通过综合计算Vos形成能和电子结构分析，发现了Vo链的导电性-稳定性困境，为理解和设计基于\(\ce{HfO2}\)表面的电子设备提供了指导。</p>
             </div>
         </section>
 
-        <section id="publications" class="section">
+        <section id="publications" class="section publications">
             <h2>出版物</h2>
             <p><strong>[1] 程影星, Toon Verstraelen.</strong> 分子极化率和色散系数中波动电荷的重要性. <em>J. Chem. Phys.</em> 159, 094111, (2023).</p>
             <p><strong>[2] 程影星, Toon Verstraelen.</strong> 频率依赖极化力场的新框架. <em>J. Chem. Phys.</em> 157, 124106, (2022).</p>
             <p><strong>[3] 程影星, 祝令刚, 王冠杰, 周剑, 孙志梅.</strong> 固体中空位形成能及其与键合环境的关系: 高通量计算和机器学习研究. <em>Comput. Mater. Sci.</em> 183, 109803, (2020).</p>
             <p><strong>[4] 程影星, 祝令刚, 周剑, 孙志梅.</strong> pyGACE: 结合遗传算法和簇扩展方法预测含点缺陷系统的基态结构. <em>Comput. Mater. Sci.</em> 174, 109482, (2020).</p>
-            <p><strong>[5] 程影星, 祝令刚, 应一乐, 周剑, 孙志梅.</strong> 单斜\(\ce{HfO2}\)强还原($\overline{1}$11)表面的电子结构. <em>Appl. Surf. Sci.</em> 447, 618, (2018).</p>
+            <p><strong>[5] 程影星, 祝令刚, 应一乐, 周剑, 孙志梅.</strong> 单斜\(\ce{HfO2}\)强还原(\(\overline{1}\)11)表面的电子结构. <em>Appl. Surf. Sci.</em> 447, 618, (2018).</p>
         </section>
 
-        <section id="unpublished-papers" class="section">
+        <section id="unpublished-papers" class="section publications">
             <h2>未出版论文</h2>
             <p><strong>[1] 程影星, Toon Verstraelen.</strong> 打破极限: 开发精确极化力场的新方法. (2023)</p>
             <p><strong>[2] 程影星, Toon Verstraelen.</strong> 探索主族和过渡金属元素偶极极化率计算中的主导因素. (2023)</p>
         </section>
 
-        <section id="software" class="section">
+        <section id="software" class="section software">
             <h2>软件开发</h2>
             <p><strong>开发了一个计算长程关联能量的软件包</strong>，考虑了电荷和偶极子。该软件包包括所有ACKS2\(\omega\)变体的实现，以及\emph{ab-initio}实现，如HFsrDFT和各种RPA能量模型。虽然该软件包尚未开源，但可根据请求提供。 <a href="https://github.com/yingxingcheng/LRC-CD">GitHub仓库</a></p>
             <p><strong>作为“Python for Scientists”本科课程的助教</strong>，设计了几个Python项目。 <a href="https://github.com/yingxingcheng/py4sci-projects">GitHub仓库</a></p>
@@ -184,19 +214,19 @@
             <p><strong>开发了PyGACE</strong>，一个结合遗传算法和簇扩展方法的Python包。 <a href="https://github.com/yingxingcheng/pygace">GitHub仓库</a></p>
         </section>
 
-        <section id="skills" class="section">
+        <section id="skills" class="section skills">
             <h2>技术技能</h2>
             <p><strong>软件:</strong> Dalton, Gaussian, DIRAC, PySCF, PSI4, VASP, ATAT, LAMMPS, Pymatgen, Atomate, Horton</p>
             <p><strong>编程:</strong> Python, Fortran, C++, C</p>
         </section>
 
-        <section id="languages" class="section">
+        <section id="languages" class="section languages">
             <h2>语言</h2>
             <p><strong>中文:</strong> 母语</p>
             <p><strong>英文:</strong> 流利</p>
         </section>
 
-        <section id="awards" class="section">
+        <section id="awards" class="section awards">
             <h2>个人奖项</h2>
             <p><strong>2018:</strong> 国家奖学金，北京航空航天大学，北京，中国</p>
             <p><strong>2016:</strong> 优秀毕业生，华中科技大学，武汉，中国</p>
@@ -205,7 +235,7 @@
             <p><strong>2012:</strong> 优秀学生干部，华中科技大学，武汉，中国</p>
         </section>
 
-        <section id="internship" class="section">
+        <section id="internship" class="section internship">
             <h2>实习经历</h2>
             <p><strong>软件工程师</strong>，北京思图科技有限公司，北京，中国 (2017/03 - 2017/09)</p>
             <p>使用C++和Qt库开发GUI应用程序。</p>
@@ -213,7 +243,7 @@
             <p>使用PHP和Yii2框架开发网络应用程序。</p>
         </section>
 
-        <section id="references" class="section">
+        <section id="references" class="section references">
             <h2>参考</h2>
             <p><strong>Toon Verstraelen 教授</strong>，根特大学，比利时根特。 <a href="mailto:toon.verstraelen@ugent.be">toon.verstraelen@ugent.be</a></p>
             <p><strong>祝令刚教授</strong>，北京航空航天大学，中国北京。 <a href="mailto:lgzhu7@buaa.edu.cn">lgzhu7@buaa.edu.cn</a></p>
