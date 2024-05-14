@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>程影星的主页</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #0779e4 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        .main-content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+        }
+        .main-content h1, .main-content h2, .main-content h3 {
+            color: #333;
+        }
+        .main-content p {
+            color: #666;
+        }
+        .photo {
+            float: right;
+            margin: 0 0 10px 10px;
+        }
+        .section {
+            margin-bottom: 40px;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .contact-info a {
+            color: #333;
+            text-decoration: none;
+        }
+        .research-item {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>程影星</h1>
+                <p>物理学博士</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#education">教育经历</a></li>
+                    <li><a href="#experience">研究经历</a></li>
+                    <li><a href="#publications">出版物</a></li>
+                    <li><a href="#software">软件开发</a></li>
+                    <li><a href="#skills">技能</a></li>
+                    <li><a href="#languages">语言</a></li>
+                    <li><a href="#awards">奖励</a></li>
+                    <li><a href="#references">参考</a></li>
+                    <li><a href="index.html">English</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-content">
+        <section id="intro">
+            <img src="pictures/yingxing.jpg" alt="程影星" class="photo" width="150">
+            <h1>欢迎来到我的主页</h1>
+            <p>开发频率依赖极化力场、时间依赖密度泛函理论（TDDFT）、计算材料科学、软件工程和机器学习。</p>
+        </section>
+
+        <section id="contact-info">
+            <h2>联系方式</h2>
+            <p><i class="fas fa-calendar-alt"></i> 1994-06-08</p>
+            <p><i class="fas fa-mobile-alt"></i> +32-494878786</p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/yingxingcheng">@yingxingcheng</a></p>
+            <p><i class="fas fa-envelope"></i> <a href="mailto:yingxing.cheng@ugent.be">yingxing.cheng@ugent.be</a></p>
+        </section>
+
+        <section id="education" class="section">
+            <h2>教育经历</h2>
+            <p><strong>2019-2023:</strong> 物理学博士学位，根特大学，根特，比利时</p>
+            <p><strong>2016-2019:</strong> 材料科学与工程硕士学位，北京航空航天大学 (BUAA)，北京，中国 (GPA: 3.60 of 4.00)</p>
+            <p><strong>2012-2016:</strong> 材料科学与工程学士学位，华中科技大学 (HUST)，武汉，中国 (GPA: 3.72 of 4.00)</p>
+        </section>
+
+        <section id="experience" class="section">
+            <h2>研究经历</h2>
+            <div class="research-item">
+                <h3>2020-2023</h3>
+                <p><strong>频率依赖极化力场开发: ACKS2\(\omega\) 模型</strong></p>
+                <p>创建了ACKS2\(\omega\)，这是极化力场ACKS2的频率依赖扩展，用于预测有限系统的动态响应特性。通过评估42个有机和无机分子单体的吸收光谱来验证该方法的准确性，显示与时间依赖密度泛函理论（TDDFT）计算具有良好的一致性。计算了\(C_6\)色散系数，结果与TDDFT参考值高度一致。此模型中的参数是电子波函数的简单期望值，硬度矩阵完全采用ACKS2的绝热近似。这些发现证实了ACKS2\(\omega\)在频率依赖响应的量子力学描述与计算效率高的力场模型之间提供了牢固的联系。</p>
+            </div>
+            <div class="research-item">
+                <h3>2020-2023</h3>
+                <p><strong>从TDDFT导出ACKS2\(\omega\)模型: 严格的方法</strong></p>
+                <p>开发了一种基于TDDFT导出ACKS2\(\omega\)模型的新方法。引入了一种原子凝聚的TDDFT方法，称为acTDDFT，可用于计算非常大分子的紫外-可见光谱。</p>
+            </div>
+            <div class="research-item">
+                <h3>2020-2023</h3>
+                <p><strong>使用ACKS2\(\omega\)模型研究分子线性响应特性中波动电荷的作用</strong></p>
+                <p>探索了波动电荷对有限系统动态线性响应特性的贡献，重点关注偶极极化率(\(\alpha\))和\(C_6\)色散系数。发现波动电荷是分子\(\alpha\)各向异性的主要贡献者，电荷转移在长链或\(\pi\)共轭系统中起重要作用。对于各向异性\(C_6\)系数，波动电荷贡献显著，而偶极-偶极相互作用主要补偿了各向异性。这些发现提供了对波动电荷在决定动态线性响应特性中作用的见解，并有助于开发精确的极化力场。</p>
+            </div>
+            <div class="research-item">
+                <h3>2019-2020</h3>
+                <p><strong>使用DIRAC程序建立的考虑相对论和相关效应的原子偶极极化率综合数据库: ACKS2\(\omega\) 参数化</strong></p>
+                <p>应用有限场方法计算主族和过渡金属元素的静态偶极极化率。证明了标量相对论效应在第1-2组和第11-12组元素中占主导地位，而自旋-轨道耦合效应在所有组的偶极极化率计算中均可忽略不计，除第13-18组外。深入了解了主族和过渡金属元素的基本特性，强调了在偶极极化率计算中考虑各种因素的重要性。此工作可用于参数化ACKS2\(\omega\)以开发极化力场。</p>
+            </div>
+            <div class="research-item">
+                <h3>2017-2018</h3>
+                <p><strong>开发了一种结合遗传算法和簇扩展方法的框架，用于预测含点缺陷材料的原子结构</strong></p>
+                <p>作为主要开发人员，设计了一个结合遗传算法、簇扩展（CE）方法和第一性原理超胞方法的框架，称为“pyGACE”，可以有效地找到含点缺陷材料（包括合金/掺杂系统）的基态或亚稳态。通过搜索两种系统的稳定结构，即含氧空位的\(\mathrm{HfO}_{2-x}\)和掺铌的\(\mathrm{SrTi}_{1-x}\mathrm{Nb}_x\mathrm{O}_3\)，并识别出比文献中更稳定的结构，展示了pyGACE的效率。</p>
+            </div>
+            <div class="research-item">
+                <h3>2017-2018</h3>
+                <p><strong>开发了一种使用人工神经网络（ANN）的自动计算空位形成能和键合环境分析的工作流程</strong></p>
+                <p>作为主要开发人员，设计了一个框架，自动计算空位形成能(\(E_f\))并使用人工神经网络（ANN）方法分析\(E_f\)中隐藏的键合环境。GeTe相变存储材料中的Ge空位被用作案例研究，获得了不同键合对系统能量的贡献，并基于此进一步分析了原子间的键合。</p>
+            </div>
+            <div class="research-item">
+                <h3>2016-2017</h3>
+                <p><strong>研究了单斜\(\ce{HfO2}\)强还原($\overline{1}11$)表面的电子结构</strong></p>
+                <p>使用第一性原理计算研究了表面氧空位（Vos）引起的\(\ce{HfO2}\)电子结构变化，以探索其在表面控制的电子设备中的潜在应用。通过综合计算Vos形成能和电子结构分析，发现了Vo链的导电性-稳定性困境，为理解和设计基于\(\ce{HfO2}\)表面的电子设备提供了指导。</p>
+            </div>
+        </section>
+
+        <section id="publications" class="section">
+            <h2>出版物</h2>
+            <p><strong>[1] 程影星, Toon Verstraelen.</strong> 分子极化率和色散系数中波动电荷的重要性. <em>J. Chem. Phys.</em> 159, 094111, (2023).</p>
+            <p><strong>[2] 程影星, Toon Verstraelen.</strong> 频率依赖极化力场的新框架. <em>J. Chem. Phys.</em> 157, 124106, (2022).</p>
+            <p><strong>[3] 程影星, 祝令刚, 王冠杰, 周剑, 孙志梅.</strong> 固体中空位形成能及其与键合环境的关系: 高通量计算和机器学习研究. <em>Comput. Mater. Sci.</em> 183, 109803, (2020).</p>
+            <p><strong>[4] 程影星, 祝令刚, 周剑, 孙志梅.</strong> pyGACE: 结合遗传算法和簇扩展方法预测含点缺陷系统的基态结构. <em>Comput. Mater. Sci.</em> 174, 109482, (2020).</p>
+            <p><strong>[5] 程影星, 祝令刚, 应一乐, 周剑, 孙志梅.</strong> 单斜\(\ce{HfO2}\)强还原($\overline{1}$11)表面的电子结构. <em>Appl. Surf. Sci.</em> 447, 618, (2018).</p>
+        </section>
+
+        <section id="unpublished-papers" class="section">
+            <h2>未出版论文</h2>
+            <p><strong>[1] 程影星, Toon Verstraelen.</strong> 打破极限: 开发精确极化力场的新方法. (2023)</p>
+            <p><strong>[2] 程影星, Toon Verstraelen.</strong> 探索主族和过渡金属元素偶极极化率计算中的主导因素. (2023)</p>
+        </section>
+
+        <section id="software" class="section">
+            <h2>软件开发</h2>
+            <p><strong>开发了一个计算长程关联能量的软件包</strong>，考虑了电荷和偶极子。该软件包包括所有ACKS2\(\omega\)变体的实现，以及\emph{ab-initio}实现，如HFsrDFT和各种RPA能量模型。虽然该软件包尚未开源，但可根据请求提供。 <a href="https://github.com/yingxingcheng/LRC-CD">GitHub仓库</a></p>
+            <p><strong>作为“Python for Scientists”本科课程的助教</strong>，设计了几个Python项目。 <a href="https://github.com/yingxingcheng/py4sci-projects">GitHub仓库</a></p>
+            <p><strong>开发了短程DFT xc函数</strong>（Python + Fortran + f2py）。 <a href="https://github.com/yingxingcheng/short-range-xc-functionals">GitHub仓库</a></p>
+            <p><strong>开发了DIRAC程序的Python封装</strong>，用于高精度量子化学计算。该封装提供了一个易于使用的界面，用于执行复杂的计算和分析结果。 <a href="https://github.com/yingxingcheng/pydirac">GitHub仓库</a></p>
+            <p><strong>开发了PyGACE</strong>，一个结合遗传算法和簇扩展方法的Python包。 <a href="https://github.com/yingxingcheng/pygace">GitHub仓库</a></p>
+        </section>
+
+        <section id="skills" class="section">
+            <h2>技术技能</h2>
+            <p><strong>软件:</strong> Dalton, Gaussian, DIRAC, PySCF, PSI4, VASP, ATAT, LAMMPS, Pymatgen, Atomate, Horton</p>
+            <p><strong>编程:</strong> Python, Fortran, C++, C</p>
+        </section>
+
+        <section id="languages" class="section">
+            <h2>语言</h2>
+            <p><strong>中文:</strong> 母语</p>
+            <p><strong>英文:</strong> 流利</p>
+        </section>
+
+        <section id="awards" class="section">
+            <h2>个人奖项</h2>
+            <p><strong>2018:</strong> 国家奖学金，北京航空航天大学，北京，中国</p>
+            <p><strong>2016:</strong> 优秀毕业生，华中科技大学，武汉，中国</p>
+            <p><strong>2014:</strong> 国家奖学金，优秀学生，华中科技大学，武汉，中国</p>
+            <p><strong>2013:</strong> 优秀学生，优秀学生干部，华中科技大学，武汉，中国</p>
+            <p><strong>2012:</strong> 优秀学生干部，华中科技大学，武汉，中国</p>
+        </section>
+
+        <section id="internship" class="section">
+            <h2>实习经历</h2>
+            <p><strong>软件工程师</strong>，北京思图科技有限公司，北京，中国 (2017/03 - 2017/09)</p>
+            <p>使用C++和Qt库开发GUI应用程序。</p>
+            <p><strong>网络开发工程师</strong>，武汉企秀网络科技有限公司，武汉，中国 (2015/12 - 2016/02)</p>
+            <p>使用PHP和Yii2框架开发网络应用程序。</p>
+        </section>
+
+        <section id="references" class="section">
+            <h2>参考</h2>
+            <p><strong>Toon Verstraelen 教授</strong>，根特大学，比利时根特。 <a href="mailto:toon.verstraelen@ugent.be">toon.verstraelen@ugent.be</a></p>
+            <p><strong>祝令刚教授</strong>，北京航空航天大学，中国北京。 <a href="mailto:lgzhu7@buaa.edu.cn">lgzhu7@buaa.edu.cn</a></p>
+            <p><strong>孙志梅教授</strong>，北京航空航天大学，中国北京。 <a href="mailto:zmsun@buaa.edu.cn">zmsun@buaa.edu.cn</a></p>
+            <p><strong>单斌教授</strong>，华中科技大学，中国武汉。 <a href="mailto:bshan@mail.hust.edu.cn">bshan@mail.hust.edu.cn</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2024 程影星. 版权所有。</p>
+    </footer>
+
+</body>
+</html>
