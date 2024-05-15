@@ -170,40 +170,10 @@ footer {
         margin: 0 auto;
         margin-top: 20px;
     }
-    .intro h1 {
-        font-size: 2em;
-    }
-    .intro h2 {
-        font-size: 1.2em;
-    }
-    .quote p {
-        font-size: 1em;
-    }
-    .section h2 {
-        font-size: 1.5em;
-    }
-    .section p {
-        font-size: 0.9em;
-    }
 }
 
 @media (max-width: 480px) {
     .container {
         width: 95%;
-    }
-    .intro h1 {
-        font-size: 1.8em;
-    }
-    .intro h2 {
-        font-size: 1em;
-    }
-    .quote p {
-        font-size: 0.9em;
-    }
-    .section h2 {
-        font-size: 1.2em;
-    }
-    .section p {
-        font-size: 0.8em;
     }
 }
