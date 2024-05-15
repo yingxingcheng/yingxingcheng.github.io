@@ -1,0 +1,492 @@
+{
+    "en": {
+        "lang": "en",
+        "title": "YingXing Cheng's Homepage",
+        "sections": {
+            "intro": {
+                "name": "YingXing Cheng",
+                "degree": "PhD Degree in Physics",
+                "contact_info": {
+                    "birthday": "1994-06-08",
+                    "phone": "+32-494878786",
+                    "github": "https://github.com/yingxingcheng",
+                    "email": "yingxing.cheng@mathematik.uni-stuttgart.de",
+                    "image": "assets/images/yingxing.jpg"
+                },
+                "quote": "Development of frequency-dependent polarizable force fields, Time-Dependent Density Functional Theory (TDDFT), Computational Material Science, Software Engineering, and Machine Learning"
+            },
+            "education": {
+                "title": "Education",
+                "items": [
+                    {
+                        "period": "2023-now",
+                        "degree": "PostDoc, Numerical Mathematics for High Performance Computing (NMH)",
+                        "institution": "University of Stuttgart, Stuttgart, Germany"
+                    },
+                    {
+                        "period": "2019-2023",
+                        "degree": "PhD Degree, Faculty of Science: Physics",
+                        "institution": "Ghent University, Ghent, Belgium"
+                    },
+                    {
+                        "period": "2016-2019",
+                        "degree": "Master's Degree, Materials Science and Engineering",
+                        "institution": "Beihang University (BUAA), Beijing, China",
+                        "gpa": "3.60 of 4.00"
+                    },
+                    {
+                        "period": "2012-2016",
+                        "degree": "Bachelor's Degree, Materials Science and Engineering",
+                        "institution": "Huazhong University of Science and Technology (HUST), Wuhan, China",
+                        "gpa": "3.72 of 4.00"
+                    }
+                ]
+            },
+            "experience": {
+                "title": "Research",
+                "items": [
+                    {
+                        "period": "2020-2023",
+                        "title": "Development of Frequency-Dependent Polarizable Force Field: ACKS2\\(\\omega\\) Model",
+                        "description": "Created ACKS2\\(\\omega\\), a frequency-dependent extension of the polarizable force field ACKS2, for predicting dynamical response properties of finite systems. Validated the method's accuracy by evaluating absorption spectra of 42 organic and inorganic molecular monomers, showing good agreement with time-dependent density functional theory (TDDFT) calculations. Computed \\(C_6\\) dispersion coefficients, closely reproducing TDDFT reference values. The parameters in this model are computed as simple expectation values of an electronic wavefunction, and the hardness matrix is entirely reused from ACKS2 using an adiabatic approximation. These findings confirm that ACKS2\\(\\omega\\) provides a solid connection between quantum-mechanical descriptions of frequency-dependent response and computationally efficient force-field models."
+                    },
+                    {
+                        "period": "2020-2023",
+                        "title": "Investigating the Role of Fluctuating Charges in Molecular Linear-Response Properties Using ACKS2\\(\\omega\\) Model",
+                        "description": "Explored the contribution of fluctuating charges to the dynamic linear response properties of finite systems, focusing on dipole polarizability (\\(\\alpha\\)) and \\(C_6\\) dispersion coefficients. Discovered that fluctuating charges are the dominant contributor to molecular \\(\\alpha\\) anisotropy, with charge transfer playing a significant role in long-chain or \\(\\pi\\)-conjugated systems. For anisotropic \\(C_6\\) coefficients, fluctuating charges contribute significantly, while dipole-dipole interactions mainly compensate for anisotropy. These findings offer insights into the role of fluctuating charges in determining dynamic linear-response properties and contribute to the development of accurate polarizable force fields."
+                    },
+                    {
+                        "period": "2019-2020",
+                        "title": "Comprehensive Database of Atomic Dipole Polarizabilities with Relativistic and Correlation Effects Using DIRAC Program: ACKS2\\(\\omega\\) Parameterizations",
+                        "description": "Applied the finite-field method to calculate static dipole polarizability for main-group and transition-metal elements. Demonstrated that scalar-relativistic effects are predominant for Groups 1-2 and 11-12 elements, while spin-orbit coupling effects are negligible in dipole polarizability calculations across all groups, except for Groups 13-18. Gained insights into the fundamental properties of main-group and transition-metal elements, emphasizing the importance of accounting for various factors in dipole polarizability calculations. This work can be used to parameterize ACKS2\\(\\omega\\) for polarizable force field development."
+                    },
+                    {
+                        "period": "2017-2018",
+                        "title": "Developed a Framework Combining Genetic Algorithm and Cluster Expansion Method for Predicting Atomic Structures of Materials with Point Defects",
+                        "description": "As the leading developer, designed a framework combining genetic algorithm, cluster expansion (CE) method and first-principles supercell method called \"pyGACE\" that can effectively locate the ground-state or metastable states of point-defect-containing materials, including alloyed/doped systems. The efficiency of pyGACE was demonstrated by searching for stable structures of two systems, i.e., oxygen-vacancy-containing \\(\\mathrm{HfO}_{2-x}\\) and Nb-doped \\(\\mathrm{SrTi}_{1-x}\\mathrm{Nb}_x\\mathrm{O}_3\\), and identifying more stable structures than those available in the literature."
+                    },
+                    {
+                        "period": "2017-2018",
+                        "title": "Developed an Automatic Workflow of Vacancy-Formation-Energy Calculation and Bonding-Environment Analysis Using ANN",
+                        "description": "As the leading developer, designed a framework for automatically computing vacancy-formation energies (\\(E_f\\)) and analyzing the bonding environment concealed in \\(E_f\\) using an artificial-neural-network (ANN) method. Ge vacancy in phase-change memory material GeTe was used as a case study, and contributions of different bondings to the energy of the system were obtained, based on which the bonding between atoms was further analyzed."
+                    },
+                    {
+                        "period": "2016-2017",
+                        "title": "Studied the Electronic Structure of Strongly Reduced (\\(\\overline{1}11\\)) Surface of Monoclinic HfO\\(_2\\)",
+                        "description": "Using first-principles calculations, the surface oxygen-vacancies (Vos) induced electronic-structure variation of HfO\\(_2\\) was studied to explore its potential applications in surface-controlled electronic devices. Through comprehensive calculations of Vos formation energies and electronic structure analysis, a conductivity-stability dilemma of the Vo-chains was found, providing a guideline for understanding and designing electronic devices based on HfO\\(_2\\) surface."
+                    }
+                ]
+            },
+            "publications": {
+                "title": "Publications",
+                "items": [
+                    {
+                        "authors": "YingXing Cheng, Toon Verstraelen",
+                        "title": "The significance of fluctuating charges for molecular polarizability and dispersion coefficients",
+                        "journal": "J. Chem. Phys.",
+                        "volume": "159",
+                        "pages": "094111",
+                        "year": "2023",
+                        "link": "https://doi.org/10.1063/5.0163842"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Toon Verstraelen",
+                        "title": "A new framework for frequency-dependent polarizable force fields",
+                        "journal": "J. Chem. Phys.",
+                        "volume": "157",
+                        "pages": "124106",
+                        "year": "2022",
+                        "link": "https://doi.org/10.1063/5.0115151"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Linggnag Zhu, Guanjie Wang, Jian Zhou, and Zhimei Sun",
+                        "title": "Vacancy formation energy and its connection with bonding environment in solid: A high-throughput calculation and machine learning study",
+                        "journal": "Comput. Mater. Sci.",
+                        "volume": "183",
+                        "pages": "109803",
+                        "year": "2020",
+                        "link": "https://doi.org/10.1016/j.commatsci.2020.109803"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Linggang Zhu, Jian Zhou, and Zhimei Sun",
+                        "title": "pyGACE: Combining the genetic algorithm and cluster expansion methods to predict the ground-state structure of systems containing point defects",
+                        "journal": "Comput. Mater. Sci.",
+                        "volume": "174",
+                        "pages": "109482",
+                        "year": "2020",
+                        "link": "https://doi.org/10.1016/j.commatsci.2019.109482"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Linggang Zhu, Yile Ying, Jian Zhou, and Zhimei Sun",
+                        "title": "Electronic structure of strongly reduced (\\(\\overline{1}11\\)) surface of monoclinic HfO\\(_2\\)",
+                        "journal": "Appl. Surf. Sci.",
+                        "volume": "447",
+                        "pages": "618",
+                        "year": "2018",
+                        "link": "https://doi.org/10.1016/j.apsusc.2018.03.234"
+                    }
+                ]
+            },
+            "unpublished_papers": {
+                "title": "Unpublished Papers",
+                "items": [
+                    {
+                        "authors": "YingXing Cheng",
+                        "title": "Relativistic and Electron Correlation Effects in Static Dipole Polarizabilities for Main-Group Elements",
+                        "year": "2024",
+                        "status": "Submitted to PRA"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Eric Cancès, Virginie Ehrlacher, Alston J. Misquitta, and Benjamin Stamm",
+                        "title": "Multi-center decomposition of molecular densities: A numerical perspective",
+                        "year": "2024",
+                        "link": "https://arxiv.org/abs/2405.08455"
+                    }
+                ]
+            },
+            "software": {
+                "title": "Software",
+                "items": [
+                    {
+                        "title": "Developed a package that calculates long-range correlation energy",
+                        "description": "taking into account charge and dipoles. The package includes implementations for all ACKS2\\(\\omega\\) variants, as well as <em>ab-initio</em> implementations such as HFsrDFT and various RPA energy models. While the package is not yet open-source, it can be made available upon request.",
+                        "link": "https://github.com/yingxingcheng/LRC-CD"
+                    },
+                    {
+                        "title": "Developed a short-range DFT xc functional",
+                        "description": "(Python + Fortran + f2py).",
+                        "link": "https://github.com/yingxingcheng/short-range-xc-functionals"
+                    },
+                    {
+                        "title": "Developed a Python wrapper for the DIRAC program",
+                        "description": "which is used for high-precision quantum chemical calculations. The wrapper provides an easy-to-use interface for performing complex calculations and analyzing results.",
+                        "link": "https://github.com/yingxingcheng/pydirac"
+                    },
+                    {
+                        "title": "Developed PyGACE",
+                        "description": "a Python package combining genetic algorithms and cluster expansion method.",
+                        "link": "https://github.com/yingxingcheng/pygace"
+                    }
+                ]
+            },
+            "skills": {
+                "title": "Skills",
+                "items": [
+                    {
+                        "category": "SOFTWARE",
+                        "skills": "Dalton, Gaussian, DIRAC, PySCF, PSI4, VASP, ATAT, LAMMPS, Pymatgen, Atomate, Horton"
+                    },
+                    {
+                        "category": "SCRIPTING",
+                        "skills": "Python, Fortran, C++, C, Julia"
+                    }
+                ]
+            },
+            "awards": {
+                "title": "Awards",
+                "items": [
+                    {
+                        "year": "2018",
+                        "award": "National Scholarship",
+                        "institution": "Beihang University, Beijing, China"
+                    },
+                    {
+                        "year": "2016",
+                        "award": "Outstanding Graduates",
+                        "institution": "Huazhong University of Science and Technology, Wuhan, China"
+                    },
+                    {
+                        "year": "2014",
+                        "award": "National Scholarship, Merit Student",
+                        "institution": "Huazhong University of Science and Technology, Wuhan, China"
+                    },
+                    {
+                        "year": "2013",
+                        "award": "Merit Student, Excellent Student Cadre",
+                        "institution": "Huazhong University of Science and Technology, Wuhan, China"
+                    },
+                    {
+                        "year": "2012",
+                        "award": "Excellent Student Cadre",
+                        "institution": "Huazhong University of Science and Technology, Wuhan, China"
+                    }
+                ]
+            },
+            "references": {
+                "title": "References",
+                "items": [
+                    {
+                        "name": "Prof. Dr. Benjamin Stamm",
+                        "institution": "University of Stuttgart, Stuttgart, Germany",
+                        "email": "benjamin.stamm@mathematik.uni-stuttgart.de"
+                    },
+                    {
+                        "name": "Prof. Dr. Toon Verstraelen",
+                        "institution": "Ghent University, Ghent, Belgium",
+                        "email": "toon.verstraelen@ugent.be"
+                    },
+                    {
+                        "name": "Prof. Dr. Linggang Zhu",
+                        "institution": "BUAA, Beijing, China",
+                        "email": "lgzhu7@buaa.edu.cn"
+                    },
+                    {
+                        "name": "Prof. Dr. Zhimei Sun",
+                        "institution": "BUAA, Beijing, China",
+                        "email": "zmsun@buaa.edu.cn"
+                    },
+                    {
+                        "name": "Prof. Dr. Bin Shan",
+                        "institution": "HUST, Wuhan, China",
+                        "email": "bshan@mail.hust.edu.cn"
+                    }
+                ]
+            }
+        }
+    },
+    "zh": {
+        "lang": "zh",
+        "title": "程影星的主页",
+        "sections": {
+            "intro": {
+                "name": "程影星",
+                "degree": "物理学博士",
+                "contact_info": {
+                    "birthday": "1994-06-08",
+                    "phone": "+32-494878786",
+                    "github": "https://github.com/yingxingcheng",
+                    "email": "yingxing.cheng@mathematik.uni-stuttgart.de",
+                    "image": "assets/images/yingxing.jpg"
+                },
+                "quote": "频率依赖分子力场开发，含时密度泛函理论，凝聚态物理，软件开发，机器学习"
+            },
+            "education": {
+                "title": "教育经历",
+                "items": [
+                    {
+                        "period": "2023-至今",
+                        "degree": "数学系博士后",
+                        "institution": "斯图加特大学，斯图加特，德国"
+                    },
+                    {
+                        "period": "2019-2023",
+                        "degree": "物理学博士学位",
+                        "institution": "根特大学，根特，比利时"
+                    },
+                    {
+                        "period": "2016-2019",
+                        "degree": "材料科学与工程硕士学位",
+                        "institution": "北京航空航天大学 (BUAA)，北京，中国",
+                        "gpa": "3.60/4.00"
+                    },
+                    {
+                        "period": "2012-2016",
+                        "degree": "材料科学与工程学士学位",
+                        "institution": "华中科技大学 (HUST)，武汉，中国",
+                        "gpa": "3.72/4.00"
+                    }
+                ]
+            },
+            "experience": {
+                "title": "研究经历",
+                "items": [
+                    {
+                        "period": "2020-2023",
+                        "title": "频率依赖极化力场开发: ACKS2\\(\\omega\\) 模型",
+                        "description": "开发ACKS2\\(\\omega\\)，这是静态极化力场ACKS2的频率h频率依赖扩展，用于计算分子体系的动态响应特性。该项工作通过评估42个有机和无机分子的吸收光谱来验证该方法的准确性，结果显示与时间依赖密度泛函理论（TDDFT）计算具有良好的一致性。该项工作还计算了\\(C_6\\)色散系数，结果与TDDFT参考值高度一致。这些发现证实了ACKS2\\(\\omega\\)在频率依赖响应的量子力学描述与计算效率高的力场模型之间提供了牢固的联系。"
+                    },
+                    {
+                        "period": "2020-2023",
+                        "title": "使用ACKS2\\(\\omega\\)模型研究分子线性响应特性中波动电荷的作用",
+                        "description": "探索了电荷涨落对分子体系动态线性响应特性的贡献，重点关注偶极极化率(\\(\\alpha\\))和\\(C_6\\)色散系数。通过计算我们发现电荷涨落是在分子\\(\\alpha\\)各向异性中站主导地位，尤其是在在长链或\\(\\pi\\)共轭系统中。对于各向异性\\(C_6\\)系数，电荷涨落仍然具有较大贡献，但是偶极-偶极相互作用占主导地位。这些发现提供了对电荷涨落在决定动态线性响应特性中作用的依据，并有为以后更加精确的极化力场开发提供理论基础。"
+                    },
+                    {
+                        "period": "2019-2020",
+                        "title": "使用DIRAC程序建立的考虑相对论和相关效应的原子偶极极化率综合数据库: ACKS2\\(\\omega\\) 参数化",
+                        "description": "该项工作应用有限场方法计算主族和过渡金属元素的静态偶极极化率。证明了标量相对论效应在第1-2组和第11-12组元素极化率的计算中占主导地位，而自旋-轨道耦合效应在所有组的偶极极化率计算中均可忽略不计，除第13-18组外。此工作可用于参数化ACKS2\\(\\omega\\)以开发极化力场。"
+                    },
+                    {
+                        "period": "2017-2018",
+                        "title": "开发了一种结合遗传算法和簇扩展方法的框架，用于预测含点缺陷材料的原子结构",
+                        "description": "作为主要开发人员，开发了一个结合遗传算法、簇扩展（CE）方法和第一性原理超胞方法的框架，“pyGACE”。通过该方法，研究人员可以有效地找到含点缺陷材料（包括合金/掺杂系统）的基态或亚稳态。我们引用该框架得到了两种系统的稳定结构，即含氧空位的\\(\\mathrm{HfO}_{2-x}\\)和掺铌的\\(\\mathrm{SrTi}_{1-x}\\mathrm{Nb}_x\\mathrm{O}_3\\)。通过计算我们发现了比之前文献中更稳定的结构。"
+                    },
+                    {
+                        "period": "2017-2018",
+                        "title": "开发了一种使用人工神经网络（ANN）的自动计算空位形成能和键合环境分析的工作流程",
+                        "description": "作为主要开发人员，我开发了一个自动流程计算框架，用来自动计算空位形成能(\\(E_f\\))，并使用人工神经网络（ANN）方法分析\\(E_f\\)与空位周围环境的关系。作为案例，该框架被用来研究GeTe相变存储材料中的Ge空位形成能与Ge原子周围的结构关系。我们发现不同键合对系统能量的贡献，并基于此进一步分析了原子间的键合。"
+                    },
+                    {
+                        "period": "2016-2017",
+                        "title": "研究了单斜\\(\\ce{HfO2}\\)强还原(\\(\\overline{1}11\\))表面的电子结构",
+                        "description": "该项工作使用第一性原理计算研究了表面氧空位（Vos）引起的\\(\\ce{HfO2}\\)电子结构变化，以探索氧空位在表面控制的电子设备中的潜在应用。通过计算空位形成能和电子结构，我们发现了氧空位链的导电性-稳定性之间的联系。该工作为理解和设计基于\\(\\ce{HfO2}\\)表面的电子设备提供了理论指导。"
+                    }
+                ]
+            },
+            "publications": {
+                "title": "出版物",
+                "items": [
+                    {
+                        "authors": "YingXing Cheng, Toon Verstraelen",
+                        "title": "The significance of fluctuating charges for molecular polarizability and dispersion coefficients",
+                        "journal": "J. Chem. Phys.",
+                        "volume": "159",
+                        "pages": "094111",
+                        "year": "2023",
+                        "link": "https://doi.org/10.1063/5.0163842"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Toon Verstraelen",
+                        "title": "A new framework for frequency-dependent polarizable force fields",
+                        "journal": "J. Chem. Phys.",
+                        "volume": "157",
+                        "pages": "124106",
+                        "year": "2022",
+                        "link": "https://doi.org/10.1063/5.0115151"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Linggnag Zhu, Guanjie Wang, Jian Zhou, and Zhimei Sun",
+                        "title": "Vacancy formation energy and its connection with bonding environment in solid: A high-throughput calculation and machine learning study",
+                        "journal": "Comput. Mater. Sci.",
+                        "volume": "183",
+                        "pages": "109803",
+                        "year": "2020",
+                        "link": "https://doi.org/10.1016/j.commatsci.2020.109803"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Linggang Zhu, Jian Zhou, and Zhimei Sun",
+                        "title": "pyGACE: Combining the genetic algorithm and cluster expansion methods to predict the ground-state structure of systems containing point defects",
+                        "journal": "Comput. Mater. Sci.",
+                        "volume": "174",
+                        "pages": "109482",
+                        "year": "2020",
+                        "link": "https://doi.org/10.1016/j.commatsci.2019.109482"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Linggang Zhu, Yile Ying, Jian Zhou, and Zhimei Sun",
+                        "title": "Electronic structure of strongly reduced (\\(\\overline{1}11\\)) surface of monoclinic HfO\\(_2\\)",
+                        "journal": "Appl. Surf. Sci.",
+                        "volume": "447",
+                        "pages": "618",
+                        "year": "2018",
+                        "link": "https://doi.org/10.1016/j.apsusc.2018.03.234"
+                    }
+                ]
+            },
+            "unpublished_papers": {
+                "title": "未出版论文",
+                "items": [
+                    {
+                        "authors": "YingXing Cheng",
+                        "title": "Relativistic and Electron Correlation Effects in Static Dipole Polarizabilities for Main-Group Elements",
+                        "year": "2024",
+                        "status": "Submitted to PRA"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Eric Cancès, Virginie Ehrlacher, Alston J. Misquitta, and Benjamin Stamm",
+                        "title": "Multi-center decomposition of molecular densities: A numerical perspective",
+                        "year": "2024",
+                        "link": "https://arxiv.org/abs/2405.08455"
+                    }
+                ]
+            },
+            "software": {
+                "title": "软件开发",
+                "items": [
+                    {
+                        "title": "开发了一个计算长程关联能量的软件包",
+                        "description": "考虑了电荷和偶极子。该软件包包括所有ACKS2\\(\\omega\\)变体的实现，以及第一性原理计算，如HFsrDFT和各种RPA能量计算。虽然该软件包尚未完全开源，但可根据请求提供。 ACKS2\\(\\omega\\)模型已经完全开源。",
+                        "link": "https://github.com/yingxingcheng/LRC-CD"
+                    },
+                    {
+                        "title": "开发了短程DFT xc泛函",
+                        "description": "（Python + Fortran + f2py）。",
+                        "link": "https://github.com/yingxingcheng/short-range-xc-functionals"
+                    },
+                    {
+                        "title": "开发了DIRAC程序的Python封装",
+                        "description": "用于高精度量子化学计算。",
+                        "link": "https://github.com/yingxingcheng/pydirac"
+                    },
+                    {
+                        "title": "开发了PyGACE",
+                        "description": "一个结合遗传算法和簇扩展方法的Python库。",
+                        "link": "https://github.com/yingxingcheng/pygace"
+                    }
+                ]
+            },
+            "skills": {
+                "title": "常用软件",
+                "items": [
+                    {
+                        "category": "计算软件",
+                        "skills": "Dalton, Gaussian, DIRAC, PySCF, PSI4, VASP, ATAT, LAMMPS, Pymatgen, Atomate, Horton"
+                    },
+                    {
+                        "category": "编程语言",
+                        "skills": "Python, Fortran, C++, C, Julia"
+                    }
+                ]
+            },
+            "awards": {
+                "title": "获奖经历",
+                "items": [
+                    {
+                        "year": "2018",
+                        "award": "国家奖学金",
+                        "institution": "北京航空航天大学，北京，中国"
+                    },
+                    {
+                        "year": "2016",
+                        "award": "优秀毕业生",
+                        "institution": "华中科技大学，武汉，中国"
+                    },
+                    {
+                        "year": "2014",
+                        "award": "国家奖学金，优秀学生",
+                        "institution": "华中科技大学，武汉，中国"
+                    },
+                    {
+                        "year": "2013",
+                        "award": "优秀学生，优秀学生干部",
+                        "institution": "华中科技大学，武汉，中国"
+                    },
+                    {
+                        "year": "2012",
+                        "award": "优秀学生干部",
+                        "institution": "华中科技大学，武汉，中国"
+                    }
+                ]
+            },
+            "references": {
+                "title": "推荐人",
+                "items": [
+                    {
+                        "name": "Benjamin Stamm 教授",
+                        "institution": "斯图加特大学， 斯图加特，德国",
+                        "email": "benjamin.stamm@mathematik.uni-stuttgart.de"
+                    },
+                    {
+                        "name": "Toon Verstraelen 教授",
+                        "institution": "根特大学，比利时根特",
+                        "email": "toon.verstraelen@ugent.be"
+                    },
+                    {
+                        "name": "祝令刚教授",
+                        "institution": "北京航空航天大学，中国北京",
+                        "email": "lgzhu7@buaa.edu.cn"
+                    },
+                    {
+                        "name": "孙志梅教授",
+                        "institution": "北京航空航天大学，中国北京",
+                        "email": "zmsun@buaa.edu.cn"
+                    },
+                    {
+                        "name": "单斌教授",
+                        "institution": "华中科技大学，中国武汉",
+                        "email": "bshan@mail.hust.edu.cn"
+                    }
+                ]
+            }
+        }
+    }
+}
