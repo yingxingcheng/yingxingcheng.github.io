@@ -5,80 +5,105 @@ body {
     padding: 0;
     background-color: #f4f4f4;
 }
+
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
 }
+
 header {
     background: #333;
     color: #fff;
     padding-top: 30px;
     min-height: 70px;
     border-bottom: #0779e4 3px solid;
+    text-align: center; /* Center align header content */
 }
+
 header a {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 16px;
 }
+
 header ul {
     padding: 0;
     list-style: none;
+    text-align: center; /* Center align header list */
 }
+
 header li {
     display: inline;
     padding: 0 20px 0 20px;
 }
+
 .main-content {
     padding: 20px;
     background: #fff;
     margin-top: 20px;
+    text-align: justify; /* Justify align text in sections */
 }
-.main-content h1, .main-content h2, .main-content h3 {
+
+.main-content h1,
+.main-content h2,
+.main-content h3 {
     color: #333;
 }
+
 .main-content p {
     color: #000;
 }
+
 .intro {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
 }
+
 .intro .contact-imag img {
     border: 2px solid #333;
     margin-left: 20px;
+    max-width: 100%; /* Ensure image scales down */
+    height: auto;
 }
+
 .intro .details {
     flex-grow: 1;
 }
+
 .intro h1 {
     font-size: 2.5em;
     margin: 0;
 }
+
 .intro h2 {
     font-size: 1.5em;
     font-weight: normal;
     color: gray;
     margin: 10px 0;
 }
+
 .intro .contact-info {
     font-size: 1em;
     margin: 10px 0;
 }
+
 .intro .contact-info p {
     margin: 5px 0;
 }
+
 .quote p {
     font-size: 1.2em;
     color: #00008b;
-    text-align: center;
+    text-align: center; /* Center align quote section */
 }
+
 .section {
     margin-bottom: 40px;
 }
+
 .education,
 .experience,
 .publications,
@@ -89,7 +114,9 @@ header li {
 .internship,
 .references {
     margin-bottom: 20px;
+    text-align: justify; /* Justify align text in sections */
 }
+
 .education h2,
 .experience h2,
 .publications h2,
@@ -102,9 +129,11 @@ header li {
     text-transform: uppercase;
     color: #00008b;
 }
+
 .research-item {
     margin-bottom: 20px;
 }
+
 footer {
     background: #333;
     color: #fff;
@@ -112,7 +141,69 @@ footer {
     padding: 20px;
     margin-top: 20px;
 }
+
 .contact-info a {
     color: #333;
     text-decoration: none;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 860px) {
+    .container {
+        width: 90%;
+    }
+    header {
+        text-align: center;
+    }
+    header ul {
+        padding: 0;
+    }
+    header li {
+        display: block;
+        padding: 10px 0;
+    }
+    .intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    .intro .contact-imag {
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .intro h1 {
+        font-size: 2em;
+    }
+    .intro h2 {
+        font-size: 1.2em;
+    }
+    .quote p {
+        font-size: 1em;
+    }
+    .section h2 {
+        font-size: 1.5em;
+    }
+    .section p {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+    }
+    .intro h1 {
+        font-size: 1.8em;
+    }
+    .intro h2 {
+        font-size: 1em;
+    }
+    .quote p {
+        font-size: 0.9em;
+    }
+    .section h2 {
+        font-size: 1.2em;
+    }
+    .section p {
+        font-size: 0.8em;
+    }
 }
