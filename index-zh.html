@@ -20,8 +20,7 @@
                     <li><a href="#experience">研究经历</a></li>
                     <li><a href="#publications">出版物</a></li>
                     <li><a href="#software">软件开发</a></li>
-                    <li><a href="#skills">技能</a></li>
-                    <li><a href="#languages">语言</a></li>
+                    <li><a href="#skills">常用软件</a></li>
                     <li><a href="#awards">获奖经历</a></li>
                     <li><a href="#references">推荐人</a></li>
                     <li><a href="index.html">English</a></li>
@@ -49,11 +48,12 @@
 
         <section id="quote" class="quote">
             <p class="quote">
-                    分子力场，含时密度泛函理论，计算材料学，软件工程，机器学习.</p>
+                    频率依赖分子力场开发，含时密度泛函理论，凝聚态物理，软件开发，机器学习.</p>
         </section>
 
         <section id="education" class="section education">
             <h2>教育经历</h2>
+            <p><strong>2023-至今:</strong> 数学系博士后，斯图加特大学，斯图加特，德国</p>
             <p><strong>2019-2023:</strong> 物理学博士学位，根特大学，根特，比利时</p>
             <p><strong>2016-2019:</strong> 材料科学与工程硕士学位，北京航空航天大学 (BUAA)，北京，中国 (绩点: 3.60/4.00)</p>
             <p><strong>2012-2016:</strong> 材料科学与工程学士学位，华中科技大学 (HUST)，武汉，中国 (绩点: 3.72/4.00)</p>
@@ -64,78 +64,66 @@
             <div class="research-item">
                 <h3>2020-2023</h3>
                 <p><strong>频率依赖极化力场开发: ACKS2\(\omega\) 模型</strong></p>
-                <p>创建了ACKS2\(\omega\)，这是极化力场ACKS2的频率依赖扩展，用于预测有限系统的动态响应特性。通过评估42个有机和无机分子单体的吸收光谱来验证该方法的准确性，显示与时间依赖密度泛函理论（TDDFT）计算具有良好的一致性。计算了\(C_6\)色散系数，结果与TDDFT参考值高度一致。此模型中的参数是电子波函数的简单期望值，硬度矩阵完全采用ACKS2的绝热近似。这些发现证实了ACKS2\(\omega\)在频率依赖响应的量子力学描述与计算效率高的力场模型之间提供了牢固的联系。</p>
-            </div>
-            <div class="research-item">
-                <h3>2020-2023</h3>
-                <p><strong>从TDDFT导出ACKS2\(\omega\)模型: 严格的方法</strong></p>
-                <p>开发了一种基于TDDFT导出ACKS2\(\omega\)模型的新方法。引入了一种原子凝聚的TDDFT方法，称为acTDDFT，可用于计算非常大分子的紫外-可见光谱。</p>
+                <p>开发ACKS2\(\omega\)，这是静态极化力场ACKS2的频率h频率依赖扩展，用于计算分子体系的动态响应特性。该项工作通过评估42个有机和无机分子的吸收光谱来验证该方法的准确性，结果显示与时间依赖密度泛函理论（TDDFT）计算具有良好的一致性。该项工作还计算了\(C_6\)色散系数，结果与TDDFT参考值高度一致。这些发现证实了ACKS2\(\omega\)在频率依赖响应的量子力学描述与计算效率高的力场模型之间提供了牢固的联系。</p>
             </div>
             <div class="research-item">
                 <h3>2020-2023</h3>
                 <p><strong>使用ACKS2\(\omega\)模型研究分子线性响应特性中波动电荷的作用</strong></p>
-                <p>探索了波动电荷对有限系统动态线性响应特性的贡献，重点关注偶极极化率(\(\alpha\))和\(C_6\)色散系数。发现波动电荷是分子\(\alpha\)各向异性的主要贡献者，电荷转移在长链或\(\pi\)共轭系统中起重要作用。对于各向异性\(C_6\)系数，波动电荷贡献显著，而偶极-偶极相互作用主要补偿了各向异性。这些发现提供了对波动电荷在决定动态线性响应特性中作用的见解，并有助于开发精确的极化力场。</p>
+                <p>探索了电荷涨落对分子体系动态线性响应特性的贡献，重点关注偶极极化率(\(\alpha\))和\(C_6\)色散系数。通过计算我们发现电荷涨落是在分子\(\alpha\)各向异性中站主导地位，尤其是在在长链或\(\pi\)共轭系统中。对于各向异性\(C_6\)系数，电荷涨落仍然具有较大贡献，但是偶极-偶极相互作用占主导地位。这些发现提供了对电荷涨落在决定动态线性响应特性中作用的依据，并有为以后更加精确的极化力场开发提供理论基础。</p>
             </div>
             <div class="research-item">
                 <h3>2019-2020</h3>
                 <p><strong>使用DIRAC程序建立的考虑相对论和相关效应的原子偶极极化率综合数据库: ACKS2\(\omega\) 参数化</strong></p>
-                <p>应用有限场方法计算主族和过渡金属元素的静态偶极极化率。证明了标量相对论效应在第1-2组和第11-12组元素中占主导地位，而自旋-轨道耦合效应在所有组的偶极极化率计算中均可忽略不计，除第13-18组外。深入了解了主族和过渡金属元素的基本特性，强调了在偶极极化率计算中考虑各种因素的重要性。此工作可用于参数化ACKS2\(\omega\)以开发极化力场。</p>
+                <p>该项工作应用有限场方法计算主族和过渡金属元素的静态偶极极化率。证明了标量相对论效应在第1-2组和第11-12组元素极化率的计算中占主导地位，而自旋-轨道耦合效应在所有组的偶极极化率计算中均可忽略不计，除第13-18组外。此工作可用于参数化ACKS2\(\omega\)以开发极化力场。</p>
             </div>
             <div class="research-item">
                 <h3>2017-2018</h3>
                 <p><strong>开发了一种结合遗传算法和簇扩展方法的框架，用于预测含点缺陷材料的原子结构</strong></p>
-                <p>作为主要开发人员，设计了一个结合遗传算法、簇扩展（CE）方法和第一性原理超胞方法的框架，称为“pyGACE”，可以有效地找到含点缺陷材料（包括合金/掺杂系统）的基态或亚稳态。通过搜索两种系统的稳定结构，即含氧空位的\(\mathrm{HfO}_{2-x}\)和掺铌的\(\mathrm{SrTi}_{1-x}\mathrm{Nb}_x\mathrm{O}_3\)，并识别出比文献中更稳定的结构，展示了pyGACE的效率。</p>
+                <p>作为主要开发人员，开发了一个结合遗传算法、簇扩展（CE）方法和第一性原理超胞方法的框架，“pyGACE”。通过该方法，研究人员可以有效地找到含点缺陷材料（包括合金/掺杂系统）的基态或亚稳态。我们引用该框架得到了两种系统的稳定结构，即含氧空位的\(\mathrm{HfO}_{2-x}\)和掺铌的\(\mathrm{SrTi}_{1-x}\mathrm{Nb}_x\mathrm{O}_3\)。通过计算我们发现了比之前文献中更稳定的结构。</p>
             </div>
             <div class="research-item">
                 <h3>2017-2018</h3>
                 <p><strong>开发了一种使用人工神经网络（ANN）的自动计算空位形成能和键合环境分析的工作流程</strong></p>
-                <p>作为主要开发人员，设计了一个框架，自动计算空位形成能(\(E_f\))并使用人工神经网络（ANN）方法分析\(E_f\)中隐藏的键合环境。GeTe相变存储材料中的Ge空位被用作案例研究，获得了不同键合对系统能量的贡献，并基于此进一步分析了原子间的键合。</p>
+                <p>作为主要开发人员，我开发了一个自动流程计算框架，用来自动计算空位形成能(\(E_f\))，并使用人工神经网络（ANN）方法分析\(E_f\)与空位周围环境的关系。作为案例，该框架被用来研究GeTe相变存储材料中的Ge空位形成能与Ge原子周围的结构关系。我们发现不同键合对系统能量的贡献，并基于此进一步分析了原子间的键合。</p>
             </div>
             <div class="research-item">
                 <h3>2016-2017</h3>
                 <p><strong>研究了单斜\(\ce{HfO2}\)强还原(\(\overline{1}11\))表面的电子结构</strong></p>
-                <p>使用第一性原理计算研究了表面氧空位（Vos）引起的\(\ce{HfO2}\)电子结构变化，以探索其在表面控制的电子设备中的潜在应用。通过综合计算Vos形成能和电子结构分析，发现了Vo链的导电性-稳定性困境，为理解和设计基于\(\ce{HfO2}\)表面的电子设备提供了指导。</p>
+                <p>该项工作使用第一性原理计算研究了表面氧空位（Vos）引起的\(\ce{HfO2}\)电子结构变化，以探索氧空位在表面控制的电子设备中的潜在应用。通过计算空位形成能和电子结构，我们发现了氧空位链的导电性-稳定性之间的联系。该工作为理解和设计基于\(\ce{HfO2}\)表面的电子设备提供了理论指导。</p>
             </div>
         </section>
 
         <section id="publications" class="section publications">
             <h2>出版物</h2>
-            <p><strong>[1] 程影星, Toon Verstraelen.</strong> 分子极化率和色散系数中波动电荷的重要性. <em>J. Chem. Phys.</em> 159, 094111, (2023).</p>
-            <p><strong>[2] 程影星, Toon Verstraelen.</strong> 频率依赖极化力场的新框架. <em>J. Chem. Phys.</em> 157, 124106, (2022).</p>
-            <p><strong>[3] 程影星, 祝令刚, 王冠杰, 周剑, 孙志梅.</strong> 固体中空位形成能及其与键合环境的关系: 高通量计算和机器学习研究. <em>Comput. Mater. Sci.</em> 183, 109803, (2020).</p>
-            <p><strong>[4] 程影星, 祝令刚, 周剑, 孙志梅.</strong> pyGACE: 结合遗传算法和簇扩展方法预测含点缺陷系统的基态结构. <em>Comput. Mater. Sci.</em> 174, 109482, (2020).</p>
-            <p><strong>[5] 程影星, 祝令刚, 应一乐, 周剑, 孙志梅.</strong> 单斜\(\ce{HfO2}\)强还原(\(\overline{1}\)11)表面的电子结构. <em>Appl. Surf. Sci.</em> 447, 618, (2018).</p>
+            <p><strong>[1] YingXing Cheng, Toon Verstraelen.</strong> The significance of fluctuating charges for molecular polarizability and dispersion coefficients. <em>J. Chem. Phys.</em> 159, 094111, (2023).</p>
+            <p><strong>[2] YingXing Cheng, Toon Verstraelen.</strong> A new framework for frequency-dependent polarizable force fields. <em>J. Chem. Phys.</em> 157, 124106, (2022).</p>
+            <p><strong>[3] YingXing Cheng, Linggnag Zhu, Guanjie Wang, Jian Zhou, and Zhimei Sun.</strong> Vacancy formation energy and its connection with bonding environment in solid: A high-throughput calculation and machine learning study. <em>Comput. Mater. Sci.</em> 183, 109803, (2020).</p>
+            <p><strong>[4] YingXing Cheng, Linggang Zhu, Jian Zhou, and Zhimei Sun.</strong> pyGACE: Combining the genetic algorithm and cluster expansion methods to predict the ground-state structure of systems containing point defects. <em>Comput. Mater. Sci.</em> 174, 109482, (2020).</p>
+            <p><strong>[5] YingXing Cheng, Linggang Zhu, Yile Ying, Jian Zhou, and Zhimei Sun.</strong> Electronic structure of strongly reduced (\(\overline{1}11\)) surface of monoclinic HfO\(_2\). <em>Appl. Surf. Sci.</em> 447, 618, (2018).</p>
         </section>
 
         <section id="unpublished-papers" class="section publications">
             <h2>未出版论文</h2>
-            <p><strong>[1] 程影星, Toon Verstraelen.</strong> 打破极限: 开发精确极化力场的新方法. (2023)</p>
-            <p><strong>[2] 程影星, Toon Verstraelen.</strong> 探索主族和过渡金属元素偶极极化率计算中的主导因素. (2023)</p>
+            <p><strong>[1] YingXing Cheng, Toon Verstraelen.</strong> Breaking Limits: New Methods for Developing Accurate Polarizable Force Fields. (2023)</p>
+            <p><strong>[2] YingXing Cheng, Toon Verstraelen.</strong> Exploring the Dominant Factors in Dipole Polarizability Calculations for Main-Group and Transition-Metal Elements. (2023)</p>
         </section>
 
         <section id="software" class="section software">
             <h2>软件开发</h2>
-            <p><strong>开发了一个计算长程关联能量的软件包</strong>，考虑了电荷和偶极子。该软件包包括所有ACKS2\(\omega\)变体的实现，以及\emph{ab-initio}实现，如HFsrDFT和各种RPA能量模型。虽然该软件包尚未开源，但可根据请求提供。 <a href="https://github.com/yingxingcheng/LRC-CD">GitHub仓库</a></p>
-            <p><strong>作为“Python for Scientists”本科课程的助教</strong>，设计了几个Python项目。 <a href="https://github.com/yingxingcheng/py4sci-projects">GitHub仓库</a></p>
-            <p><strong>开发了短程DFT xc函数</strong>（Python + Fortran + f2py）。 <a href="https://github.com/yingxingcheng/short-range-xc-functionals">GitHub仓库</a></p>
-            <p><strong>开发了DIRAC程序的Python封装</strong>，用于高精度量子化学计算。该封装提供了一个易于使用的界面，用于执行复杂的计算和分析结果。 <a href="https://github.com/yingxingcheng/pydirac">GitHub仓库</a></p>
-            <p><strong>开发了PyGACE</strong>，一个结合遗传算法和簇扩展方法的Python包。 <a href="https://github.com/yingxingcheng/pygace">GitHub仓库</a></p>
+            <p><strong>开发了一个计算长程关联能量的软件包</strong>，考虑了电荷和偶极子。该软件包包括所有ACKS2\(\omega\)变体的实现，以及第一性原理计算，如HFsrDFT和各种RPA能量计算。虽然该软件包尚未完全开源，但可根据请求提供。 ACKS2\(\omega\)模型已经完全开源。<a href="https://github.com/yingxingcheng/LRC-CD">点击查看</a></p>
+            <p><strong>开发了短程DFT xc泛函</strong>（Python + Fortran + f2py）。 <a href="https://github.com/yingxingcheng/short-range-xc-functionals">点击查看</a></p>
+            <p><strong>开发了DIRAC程序的Python封装</strong>，用于高精度量子化学计算。 <a href="https://github.com/yingxingcheng/pydirac">点击查看</a></p>
+            <p><strong>开发了PyGACE</strong>，一个结合遗传算法和簇扩展方法的Python库。 <a href="https://github.com/yingxingcheng/pygace">点击查看</a></p>
         </section>
 
         <section id="skills" class="section skills">
-            <h2>技术技能</h2>
-            <p><strong>软件:</strong> Dalton, Gaussian, DIRAC, PySCF, PSI4, VASP, ATAT, LAMMPS, Pymatgen, Atomate, Horton</p>
-            <p><strong>编程:</strong> Python, Fortran, C++, C</p>
-        </section>
-
-        <section id="languages" class="section languages">
-            <h2>语言</h2>
-            <p><strong>中文:</strong> 母语</p>
-            <p><strong>英文:</strong> 流利</p>
+            <h2>常用软件</h2>
+            <p><strong>计算软件:</strong> Dalton, Gaussian, DIRAC, PySCF, PSI4, VASP, ATAT, LAMMPS, Pymatgen, Atomate, Horton</p>
+            <p><strong>编程语言:</strong> Python, Fortran, C++, C, Julia</p>
         </section>
 
         <section id="awards" class="section awards">
-            <h2>个人奖项</h2>
+            <h2>获奖经历</h2>
             <p><strong>2018:</strong> 国家奖学金，北京航空航天大学，北京，中国</p>
             <p><strong>2016:</strong> 优秀毕业生，华中科技大学，武汉，中国</p>
             <p><strong>2014:</strong> 国家奖学金，优秀学生，华中科技大学，武汉，中国</p>
@@ -143,16 +131,9 @@
             <p><strong>2012:</strong> 优秀学生干部，华中科技大学，武汉，中国</p>
         </section>
 
-        <section id="internship" class="section internship">
-            <h2>实习经历</h2>
-            <p><strong>软件工程师</strong>，北京思图科技有限公司，北京，中国 (2017/03 - 2017/09)</p>
-            <p>使用C++和Qt库开发GUI应用程序。</p>
-            <p><strong>网络开发工程师</strong>，武汉企秀网络科技有限公司，武汉，中国 (2015/12 - 2016/02)</p>
-            <p>使用PHP和Yii2框架开发网络应用程序。</p>
-        </section>
-
         <section id="references" class="section references">
-            <h2>参考</h2>
+            <h2>推荐人</h2>
+            <p><strong>Benjamin Stamm 教授</strong>， 斯图加特大学， 斯图加特，德国。 <a href="mailto:benjamin.stamm@mathematik.uni-stuttgart.de">benjamin.stamm@mathematik.uni-stuttgart.de</a></p>
             <p><strong>Toon Verstraelen 教授</strong>，根特大学，比利时根特。 <a href="mailto:toon.verstraelen@ugent.be">toon.verstraelen@ugent.be</a></p>
             <p><strong>祝令刚教授</strong>，北京航空航天大学，中国北京。 <a href="mailto:lgzhu7@buaa.edu.cn">lgzhu7@buaa.edu.cn</a></p>
             <p><strong>孙志梅教授</strong>，北京航空航天大学，中国北京。 <a href="mailto:zmsun@buaa.edu.cn">zmsun@buaa.edu.cn</a></p>
