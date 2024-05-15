@@ -47,7 +47,7 @@ header li {
     align-items: center;
     margin-bottom: 20px;
 }
-.intro img {
+.intro .contact-imag img {
     border: 2px solid #333;
     margin-left: 20px;
 }
@@ -71,7 +71,7 @@ header li {
 .intro .contact-info p {
     margin: 5px 0;
 }
-.intro .quote {
+.quote p {
     font-size: 1.2em;
     color: #00008b;
     text-align: center;
