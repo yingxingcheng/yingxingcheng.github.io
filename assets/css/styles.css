@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #0779e4 3px solid;
+}
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+header ul {
+    padding: 0;
+    list-style: none;
+}
+header li {
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+.main-content {
+    padding: 20px;
+    background: #fff;
+    margin-top: 20px;
+}
+.main-content h1, .main-content h2, .main-content h3 {
+    color: #333;
+}
+.main-content p {
+    color: #000;
+}
+.intro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.intro img {
+    border: 2px solid #333;
+    margin-left: 20px;
+}
+.intro .details {
+    flex-grow: 1;
+}
+.intro h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+.intro h2 {
+    font-size: 1.5em;
+    font-weight: normal;
+    color: gray;
+    margin: 10px 0;
+}
+.intro .contact-info {
+    font-size: 1em;
+    margin: 10px 0;
+}
+.intro .contact-info p {
+    margin: 5px 0;
+}
+.intro .quote {
+    font-size: 1.2em;
+    color: #00008b;
+    text-align: center;
+}
+.section {
+    margin-bottom: 40px;
+}
+.education,
+.experience,
+.publications,
+.software,
+.skills,
+.languages,
+.awards,
+.internship,
+.references {
+    margin-bottom: 20px;
+}
+.education h2,
+.experience h2,
+.publications h2,
+.software h2,
+.skills h2,
+.languages h2,
+.awards h2,
+.internship h2,
+.references h2 {
+    text-transform: uppercase;
+    color: #00008b;
+}
+.research-item {
+    margin-bottom: 20px;
+}
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+.contact-info a {
+    color: #333;
+    text-decoration: none;
+}

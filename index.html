@@ -5,107 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>YingXing Cheng's Homepage</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        .container {
-            width: 80%;
-            margin: auto;
-            overflow: hidden;
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding-top: 30px;
-            min-height: 70px;
-            border-bottom: #0779e4 3px solid;
-        }
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-        header li {
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-        .main-content {
-            padding: 20px;
-            background: #fff;
-            margin-top: 20px;
-        }
-        .main-content h1, .main-content h2, .main-content h3 {
-            color: #333;
-        }
-        .main-content p {
-            color: #666;
-        }
-        .intro {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
-        }
-        .intro img {
-            border: 2px solid #333;
-            margin-left: 20px;
-        }
-        .intro .details {
-            flex-grow: 1;
-        }
-        .intro h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
-        .intro h2 {
-            font-size: 1.5em;
-            font-weight: normal;
-            color: gray;
-            margin: 10px 0;
-        }
-        .intro .contact-info {
-            font-size: 1em;
-            margin: 10px 0;
-        }
-        .intro .contact-info p {
-            margin: 5px 0;
-        }
-        .intro .quote {
-            font-size: 1.2em;
-            color: #00008b;
-        }
-        .section {
-            margin-bottom: 40px;
-        }
-        .education, .experience, .publications, .software, .skills, .languages, .awards, .internship, .references {
-            margin-bottom: 20px;
-        }
-        .research-item {
-            margin-bottom: 20px;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .contact-info a {
-            color: #333;
-            text-decoration: none;
-        }
-    </style>
 </head>
 <body>
 
@@ -128,21 +30,23 @@
     </header>
 
     <div class="container main-content">
+        <!-- Intro Section -->
         <section id="intro" class="intro">
             <div class="details">
                 <h1>YingXing Cheng</h1>
                 <h2>PhD Degree in Physics</h2>
                 <div class="contact-info">
                     <p><i class="fas fa-calendar-alt"></i> 1994-06-08</p>
-                    <!-- <p><i class="fas fa-mobile-alt"></i> +32-494878786</p> -->
+                    <p><i class="fas fa-mobile-alt"></i> +32-494878786</p>
                     <p><i class="fab fa-github"></i> <a href="https://github.com/yingxingcheng">@yingxingcheng</a></p>
                     <p><i class="fas fa-envelope"></i> <a href="mailto:yingxing.cheng@mathematik.uni-stuttgart.de">yingxing.cheng@mathematik.uni-stuttgart.de</a></p>
                 </div>
                 <p class="quote">Development of frequency-dependent polarizable force fields, Time-Dependent Density Functional Theory (TDDFT), Computational Material Science, Software Engineering, and Machine Learning.</p>
             </div>
-            <img src="pictures/yingxing.jpg" alt="YingXing Cheng" width="150">
+            <img src="assets/images/yingxing.jpg" alt="YingXing Cheng" width="150">
         </section>
 
+        <!-- Education Section -->
         <section id="education" class="section education">
             <h2>Education</h2>
             <p><strong>2019-2023:</strong> PhD Degree, Faculty of Science: Physics, Ghent University, Ghent, Belgium</p>
@@ -150,6 +54,7 @@
             <p><strong>2012-2016:</strong> Bachelor's Degree, Materials Science and Engineering, Huazhong University of Science and Technology (HUST), Wuhan, China (GPA: 3.72 of 4.00)</p>
         </section>
 
+        <!-- Experience Section -->
         <section id="experience" class="section experience">
             <h2>Research Experience</h2>
             <div class="research-item">
@@ -189,6 +94,7 @@
             </div>
         </section>
 
+        <!-- Experience Publications -->
         <section id="publications" class="section publications">
             <h2>Published Papers</h2>
             <p><strong>[1] YingXing Cheng, Toon Verstraelen.</strong> The significance of fluctuating charges for molecular polarizability and dispersion coefficients. <em>J. Chem. Phys.</em> 159, 094111, (2023).</p>
@@ -198,12 +104,14 @@
             <p><strong>[5] YingXing Cheng, Linggang Zhu, Yile Ying, Jian Zhou, and Zhimei Sun.</strong> Electronic structure of strongly reduced (\(\overline{1}11\)) surface of monoclinic HfO\(_2\). <em>Appl. Surf. Sci.</em> 447, 618, (2018).</p>
         </section>
 
+        <!-- Unpublications Section -->
         <section id="unpublished-papers" class="section publications">
             <h2>Unpublished Papers</h2>
             <p><strong>[1] YingXing Cheng, Toon Verstraelen.</strong> Breaking Limits: New Methods for Developing Accurate Polarizable Force Fields. (2023)</p>
             <p><strong>[2] YingXing Cheng, Toon Verstraelen.</strong> Exploring the Dominant Factors in Dipole Polarizability Calculations for Main-Group and Transition-Metal Elements. (2023)</p>
         </section>
 
+        <!-- Experience Software -->
         <section id="software" class="section software">
             <h2>Software Development</h2>
             <p><strong>Developed a package that calculates long-range correlation energy</strong>, taking into account charge and dipoles. The package includes implementations for all ACKS2\(\omega\) variants, as well as <em>ab-initio</em> implementations such as HFsrDFT and various RPA energy models. While the package is not yet open-source, it can be made available upon request. <a href="https://github.com/yingxingcheng/LRC-CD">GitHub Repository</a></p>
@@ -213,18 +121,21 @@
             <p><strong>Developed PyGACE</strong>, a Python package combining genetic algorithms and cluster expansion method. <a href="https://github.com/yingxingcheng/pygace">GitHub Repository</a></p>
         </section>
 
+        <!-- Skill Section -->
         <section id="skills" class="section skills">
             <h2>Technical Skills</h2>
             <p><strong>SOFTWARE:</strong> Dalton, Gaussian, DIRAC, PySCF, PSI4, VASP, ATAT, LAMMPS, Pymatgen, Atomate, Horton</p>
             <p><strong>SCRIPTING:</strong> Python, Fortran, C++, C</p>
         </section>
 
+        <!-- Languages Section -->
         <section id="languages" class="section languages">
             <h2>Languages</h2>
             <p><strong>CHINESE:</strong> Native</p>
             <p><strong>ENGLISH:</strong> Fluent</p>
         </section>
 
+        <!-- Awards Section -->
         <section id="awards" class="section awards">
             <h2>Personal Awards</h2>
             <p><strong>2018:</strong> National Scholarship, Beihang University, Beijing, China</p>
@@ -249,6 +160,7 @@
             <p><strong>Prof. Dr. Zhimei Sun</strong>, BUAA, Beijing, China. <a href="mailto:zmsun@buaa.edu.cn">zmsun@buaa.edu.cn</a></p>
             <p><strong>Prof. Dr. Bin Shan</strong>, HUST, Wuhan, China. <a href="mailto:bshan@mail.hust.edu.cn">bshan@mail.hust.edu.cn</a></p>
         </section>
+
     </div>
 
     <footer>
