@@ -97,15 +97,6 @@
                 "title": "Publications",
                 "items": [
                     {
-                        "authors": "YingXing Cheng, Benjamin Stamm",
-                        "title": "Approximations of the Iterative Stockholder Analysis scheme using exponential basis functions",
-                        "journal": "J. Chem. Phys.",
-                        "volume": "163",
-                        "pages": "044110",
-                        "year": "2025",
-                        "link": "https://doi.org/10.1063/5.0261509"
-                    },
-                    {
                         "authors": "YingXing Cheng",
                         "title": "Relativistic and Electron-Correlation Effects in Static Dipole Polarizabilities for Group 11 Elements",
                         "journal": "J. Phys. Chem. A",
@@ -131,6 +122,15 @@
                         "pages": "3430–3441",
                         "year": "2025",
                         "link": "https://doi.org/10.1039/D4CP04754K"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Benjamin Stamm",
+                        "title": "Approximations of the Iterative Stockholder Analysis scheme using exponential basis functions",
+                        "journal": "The Journal of Chemical Physics",
+                        "volume": "163",
+                        "pages": "044110",
+                        "year": "2025",
+                        "link": "https://doi.org/10.1063/5.0260944"
                     },
                     {
                         "authors": "YingXing Cheng",
@@ -386,15 +386,6 @@
                 "title": "出版物",
                 "items": [
                     {
-                        "authors": "YingXing Cheng, Benjamin Stamm",
-                        "title": "Approximations of the Iterative Stockholder Analysis scheme using exponential basis functions",
-                        "journal": "J. Chem. Phys.",
-                        "volume": "163",
-                        "pages": "044110",
-                        "year": "2025",
-                        "link": "https://doi.org/10.1063/5.0261509"
-                    },
-                    {
                         "authors": "YingXing Cheng",
                         "title": "Relativistic and Electron-Correlation Effects in Static Dipole Polarizabilities for Group 11 Elements",
                         "journal": "J. Phys. Chem. A",
@@ -420,6 +411,15 @@
                         "pages": "3430–3441",
                         "year": "2025",
                         "link": "https://doi.org/10.1039/D4CP04754K"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Benjamin Stamm",
+                        "title": "Approximations of the Iterative Stockholder Analysis scheme using exponential basis functions",
+                        "journal": "The Journal of Chemical Physics",
+                        "volume": "163",
+                        "pages": "044110",
+                        "year": "2025",
+                        "link": "https://doi.org/10.1063/5.0260944"
                     },
                     {
                         "authors": "YingXing Cheng",
