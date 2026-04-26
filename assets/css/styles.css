@@ -78,11 +78,17 @@ header li {
     margin: 0;
 }
 
-.intro h2 {
+.intro h2.position {
     font-size: 1.5em;
     font-weight: normal;
     color: gray;
-    margin: 10px 0;
+    margin: 10px 0 4px;
+}
+
+.intro p.affiliation {
+    font-size: 1em;
+    color: #555;
+    margin: 0 0 10px;
 }
 
 .intro .contact-info {
@@ -145,6 +151,10 @@ footer {
 .contact-info a {
     color: #333;
     text-decoration: none;
+}
+
+.fa-orcid {
+    color: #a6ce39;
 }
 
 /* Media Queries for responsiveness */
