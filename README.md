@@ -56,6 +56,89 @@ python generate_html.py
 
 This will generate the `index.html` and `index-zh.html` files based on the content provided in `content.json`.
 
+## Publication updates
+
+Install Python 3.10+ dependencies and check the public sources without changing files:
+
+```bash
+python -m pip install -r requirements.txt
+python update_publications.py --check-only
+```
+
+To update the citations and regenerate both languages:
+
+```bash
+python update_publications.py
+python generate_html.py
+```
+
+The updater combines journal-article DOIs from the public ORCID record with an
+independent Crossref search for the exact author ORCID. It never imports a paper
+based on a name match alone. ORCID-linked works can be imported even when the
+publisher omitted the author ORCID from Crossref metadata. Preprints, datasets,
+and papers absent from both sources are outside this automatic journal list.
+
+Existing citations and translations are preserved. Each language is reconciled
+independently; DOI variants are deduplicated, and complete new citations are
+sorted newest-year first. API failures, invalid metadata, or incomplete source
+checks exit nonzero before writing publication data. A no-change check leaves
+`content.json` byte-for-byte unchanged. Imported text is normalized and rendered
+as escaped text, with imported MathJax commands disabled.
+
+`.github/publication-sync.json` records the date of the last complete successful
+check and source/publication counts. A fresh monthly success record provides an
+audit trail even without new articles and helps prevent public-repository
+schedule inactivity. It is not updated on a failed check.
+
+### Monthly workflow and permissions
+
+The **Monthly publication update** workflow runs on the first day of each month
+at 06:17 UTC and can be run manually on the default branch. It tests the code,
+refreshes publications, regenerates both pages, and commits only changed data,
+pages, or the successful-check record. Concurrent refreshes are serialized;
+pushes never force-overwrite another commit.
+
+The proposed workflow uses two narrowly scoped jobs:
+
+- `update`: `contents: write` to commit generated files to the default branch
+- `publish`: `pages: write` to request the existing branch-based GitHub Pages
+  build and verify that the expected commit finishes building
+
+These job permissions take effect when this workflow is approved and merged.
+No personal access token, repository permission-setting change, new secret, or
+change to the current Pages source is required. Branch protection or organization
+policy may still prohibit direct bot commits; do not relax protections to bypass
+an error. Review the failed job and rerun after resolving the reported cause.
+
+A `GITHUB_TOKEN` push [does not itself trigger a Pages build](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+The explicit Pages request handles that separately, including recovery after a
+previous publish failure even when the next refresh has no diff.
+[GitHub documents `pages: write` for this purpose](https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-syntax#permissions).
+
+Public scheduled workflows can be [disabled after 60 days without repository activity](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/disable-and-enable-workflows).
+If no run appears, inspect the Actions page and re-enable the workflow if GitHub
+shows it as inactive. Changing the cron expression on an approved merge can also
+reactivate an inactive schedule. After merging this fix, verify that the schedule
+is active, run it manually on `main`, and check that its publication and Pages
+jobs both finish successfully. A tested draft PR alone does not verify production
+automation or change the live website.
+
+### Tests
+
+The regression suite uses mocked APIs and does not depend on live services:
+
+```bash
+python -m unittest discover -s tests -v
+node tests/check_pages_workflow.cjs
+python generate_html.py
+git diff --exit-code -- index.html index-zh.html
+```
+
+**Website checks** runs on pushes and pull requests with read-only repository
+access. It checks formatting, lint, regression tests, generated-file consistency,
+and both languages' responsive layouts. No publication refresh or deployment is
+performed by that workflow.
+
 ## Content Management
 
 The content of the website is managed using the `content.json` file. This file contains structured data for both English and Chinese versions of the website. You can update the content by editing this JSON file.
