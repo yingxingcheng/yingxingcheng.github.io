@@ -97,6 +97,26 @@
                 "title": "Publications",
                 "items": [
                     {
+                        "authors": "Yifan Wang, Abudukadi Tudi, Wenqi Jin, Qigang Song, Jiaxiang Li, YingXing Cheng, Congwei Xie, Zhihua Yang, and Shilie Pan",
+                        "title": "Accelerating the Discovery of Deep-Ultraviolet Nonlinear Optical Materials by Combining Machine Learning Interatomic Potentials with First-Principles Calculations: A Case of LiB2O3F",
+                        "journal": "Crystal Growth & Design",
+                        "volume": "26",
+                        "pages": "6867-6874",
+                        "year": "2026",
+                        "link": "https://doi.org/10.1021/acs.cgd.6c00461",
+                        "source": "crossref"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Congwei Xie, Zhihua Yang, and Shilie Pan",
+                        "title": "Impact of scissors-correction schemes on first-principles calculations of second-harmonic generation in ultraviolet nonlinear-optical crystals",
+                        "journal": "The Journal of Chemical Physics",
+                        "volume": "165",
+                        "pages": "074107",
+                        "year": "2026",
+                        "link": "https://doi.org/10.1063/5.0336892",
+                        "source": "crossref"
+                    },
+                    {
                         "authors": "YingXing Cheng",
                         "title": "Relativistic and Electron-Correlation Effects in Static Dipole Polarizabilities for Group 11 Elements",
                         "journal": "J. Phys. Chem. A",
@@ -194,7 +214,7 @@
                     {
                         "title": "Developed a package that calculates long-range correlation energy",
                         "description": "taking into account charge and dipoles. The package includes implementations for all ACKS2\\(\\omega\\) variants, as well as <em>ab-initio</em> implementations such as HFsrDFT and various RPA energy models. While the package is not yet open-source, it can be made available upon request.",
-                        "link": "https://github.com/yingxingcheng/LRC-CD"
+                        "availability": "Private repository"
                     },
                     {
                         "title": "Developed a short-range DFT xc functional",
@@ -386,6 +406,26 @@
                 "title": "出版物",
                 "items": [
                     {
+                        "authors": "Yifan Wang, Abudukadi Tudi, Wenqi Jin, Qigang Song, Jiaxiang Li, YingXing Cheng, Congwei Xie, Zhihua Yang, and Shilie Pan",
+                        "title": "Accelerating the Discovery of Deep-Ultraviolet Nonlinear Optical Materials by Combining Machine Learning Interatomic Potentials with First-Principles Calculations: A Case of LiB2O3F",
+                        "journal": "Crystal Growth & Design",
+                        "volume": "26",
+                        "pages": "6867-6874",
+                        "year": "2026",
+                        "link": "https://doi.org/10.1021/acs.cgd.6c00461",
+                        "source": "crossref"
+                    },
+                    {
+                        "authors": "YingXing Cheng, Congwei Xie, Zhihua Yang, and Shilie Pan",
+                        "title": "Impact of scissors-correction schemes on first-principles calculations of second-harmonic generation in ultraviolet nonlinear-optical crystals",
+                        "journal": "The Journal of Chemical Physics",
+                        "volume": "165",
+                        "pages": "074107",
+                        "year": "2026",
+                        "link": "https://doi.org/10.1063/5.0336892",
+                        "source": "crossref"
+                    },
+                    {
                         "authors": "YingXing Cheng",
                         "title": "Relativistic and Electron-Correlation Effects in Static Dipole Polarizabilities for Group 11 Elements",
                         "journal": "J. Phys. Chem. A",
@@ -483,7 +523,7 @@
                     {
                         "title": "开发了一个计算长程关联能量的软件包",
                         "description": "考虑了电荷和偶极子。该软件包包括所有ACKS2\\(\\omega\\)变体的实现，以及第一性原理计算，如HFsrDFT和各种RPA能量计算。虽然该软件包尚未完全开源，但可根据请求提供。 ACKS2\\(\\omega\\)模型已经完全开源。",
-                        "link": "https://github.com/yingxingcheng/LRC-CD"
+                        "availability": "私有仓库"
                     },
                     {
                         "title": "开发了短程DFT xc泛函",

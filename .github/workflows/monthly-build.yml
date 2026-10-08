@@ -1,33 +1,105 @@
-name: Monthly site rebuild
+name: Monthly publication update
 
 on:
   schedule:
-    - cron: '0 6 1 * *'  # 1st of every month at 06:00 UTC
-  workflow_dispatch:       # manual trigger from GitHub UI
+    - cron: '17 6 1 * *'  # 1st of every month at 06:17 UTC, away from the hourly peak
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: publication-updates
+  cancel-in-progress: false
 
 jobs:
-  build:
+  update:
+    if: github.ref == format('refs/heads/{0}', github.event.repository.default_branch)
     runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    outputs:
+      commit: ${{ steps.commit.outputs.sha }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
 
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.x'
+          python-version: '3.12'
 
       - name: Install dependencies
-        run: pip install requests
+        run: python -m pip install -r requirements.txt
 
-      - name: Fetch new publications from ORCID + CrossRef
-        run: python3 update_publications.py
+      - name: Run regression tests
+        run: python -m unittest discover -s tests -v
 
-      - name: Regenerate HTML
-        run: python3 generate_html.py
+      - name: Check ORCID and Crossref for new journal publications
+        run: python update_publications.py
 
-      - name: Commit and push if changed
+      - name: Regenerate both languages
+        run: python generate_html.py
+
+      - name: Commit and push only if changed
+        id: commit
+        env:
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
         run: |
           git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add content.json index.html index-zh.html
-          git diff --staged --quiet || git commit -m "chore: auto-update publications and regenerate HTML [skip ci]"
-          git push
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content.json index.html index-zh.html .github/publication-sync.json
+          if ! git diff --staged --quiet; then
+            git commit -m "chore: record publication check and update site"
+            git push origin "HEAD:$DEFAULT_BRANCH"
+          else
+            echo "Publication data and successful-check record are unchanged."
+          fi
+          echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  publish:
+    needs: update
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write
+    steps:
+      # GITHUB_TOKEN commits do not trigger branch-based Pages publishing themselves.
+      # Run even on a no-op update so a previously failed Pages build can be recovered.
+      - name: Request Pages rebuild and verify the expected commit
+        uses: actions/github-script@v7
+        env:
+          EXPECTED_SHA: ${{ needs.update.outputs.commit }}
+        with:
+          retries: 3
+          script: |
+            const repo = context.repo;
+            const expected = process.env.EXPECTED_SHA;
+            const latestBuild = async () => {
+              try {
+                return (await github.rest.repos.getLatestPagesBuild(repo)).data;
+              } catch (error) {
+                if (error.status === 404) return null;
+                throw error;
+              }
+            };
+            const current = await latestBuild();
+            if (current?.commit === expected && current.status === 'built') {
+              core.info(`Pages already serves ${expected}.`);
+              return;
+            }
+            await github.rest.repos.requestPagesBuild(repo);
+            for (let attempt = 0; attempt < 48; attempt++) {
+              await new Promise(resolve => setTimeout(resolve, 10000));
+              const build = await latestBuild();
+              if (build?.commit !== expected) continue;
+              if (build.status === 'built') {
+                core.info(`Pages built the expected commit ${expected}.`);
+                return;
+              }
+              if (build.status === 'errored') {
+                throw new Error(`Pages build failed: ${build.error?.message || 'see Pages build logs'}`);
+              }
+            }
+            throw new Error(`Timed out waiting for Pages to build ${expected}; rerun this workflow.`);

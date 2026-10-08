@@ -2,6 +2,8 @@
 
 import json
 from datetime import date
+from html import escape
+from urllib.parse import urlsplit
 
 
 def _nav(sections, lang):
@@ -54,8 +56,14 @@ def _education(section):
     rows = ""
     for item in section["items"]:
         gpa = f" (GPA: {item['gpa']})" if "gpa" in item else ""
-        rows += f"<p><strong>{item['period']}:</strong> {item['degree']}, {item['institution']}{gpa}</p>"
-    return f'<section id="education" class="section education"><h2>{section["title"]}</h2>{rows}</section>'
+        rows += (
+            f"<p><strong>{item['period']}:</strong> {item['degree']}, "
+            f"{item['institution']}{gpa}</p>"
+        )
+    return (
+        '<section id="education" class="section education">'
+        f'<h2>{section["title"]}</h2>{rows}</section>'
+    )
 
 
 def _experience(section):
@@ -66,37 +74,73 @@ def _experience(section):
                 <p><strong>{item['title']}</strong></p>
                 <p>{item['description']}</p>
             </div>"""
-    return f'<section id="experience" class="section experience"><h2>{section["title"]}</h2>{items}</section>'
+    return (
+        '<section id="experience" class="section experience">'
+        f'<h2>{section["title"]}</h2>{items}</section>'
+    )
 
 
 def _publications(section):
     items = ""
     for idx, item in enumerate(section["items"]):
+        # Publication metadata may come from external APIs. Escape text without
+        # altering the TeX notation already used in our curated publications.
+        fields = {
+            key: escape(str(item.get(key, "")))
+            for key in ("authors", "title", "journal", "volume", "pages", "year")
+        }
+        link = str(item.get("link", ""))
+        link_text = escape(link)
+        reference = f'<a href="{link_text}">{link_text}</a>' if _is_web_url(link) else link_text
         citation = (
-            f'<strong>[{idx+1}] {item["authors"]}.</strong> '
-            f'{item["title"]}. <em>{item["journal"]}</em> {item["volume"]}, {item["pages"]} '
-            f'({item["year"]}). <a href="{item["link"]}">{item["link"]}</a>'
+            f'<strong>[{idx+1}] {fields["authors"]}.</strong> '
+            f'{fields["title"]}. <em>{fields["journal"]}</em> '
+            f'{fields["volume"]}, {fields["pages"]} ({fields["year"]}). {reference}'
         )
-        items += f"<p>{citation}</p>"
-    return f'<section id="publications" class="section publications"><h2>{section["title"]}</h2>{items}</section>'
+        # Imported TeX is data too, not executable MathJax commands. Curated
+        # entries keep their existing mathematical typesetting.
+        attributes = ' class="tex2jax_ignore"' if item.get("source") else ""
+        items += f"<p{attributes}>{citation}</p>"
+    title = escape(section["title"])
+    return (
+        f'<section id="publications" class="section publications"><h2>{title}</h2>{items}</section>'
+    )
+
+
+def _is_web_url(value):
+    """Only make absolute HTTP(S) URLs clickable, never executable schemes."""
+    if any(ord(char) <= 32 or char == "\\" for char in value):
+        return False
+    try:
+        parsed = urlsplit(value)
+        return parsed.scheme.lower() in {"http", "https"} and bool(parsed.hostname)
+    except ValueError:
+        return False
 
 
 def _software(section):
     items = ""
     for item in section["items"]:
-        items += (
-            f'<p><strong>{item["title"]}</strong>, {item["description"]} '
-            f'<a href="{item["link"]}">More</a></p>'
-        )
-    return f'<section id="software" class="section software"><h2>{section["title"]}</h2>{items}</section>'
+        if item.get("availability"):
+            more = f'<span class="availability">{escape(item["availability"])}</span>'
+        elif item.get("link"):
+            more = f'<a href="{escape(item["link"])}">More</a>'
+        else:
+            more = ""
+        items += f'<p><strong>{item["title"]}</strong>, {item["description"]} {more}</p>'
+    return (
+        '<section id="software" class="section software">'
+        f'<h2>{section["title"]}</h2>{items}</section>'
+    )
 
 
 def _skills(section):
     items = "".join(
-        f'<p><strong>{item["category"]}:</strong> {item["skills"]}</p>'
-        for item in section["items"]
+        f'<p><strong>{item["category"]}:</strong> {item["skills"]}</p>' for item in section["items"]
     )
-    return f'<section id="skills" class="section skills"><h2>{section["title"]}</h2>{items}</section>'
+    return (
+        f'<section id="skills" class="section skills"><h2>{section["title"]}</h2>{items}</section>'
+    )
 
 
 def _awards(section):
@@ -104,7 +148,9 @@ def _awards(section):
         f'<p><strong>{item["year"]}:</strong> {item["award"]}, {item["institution"]}</p>'
         for item in section["items"]
     )
-    return f'<section id="awards" class="section awards"><h2>{section["title"]}</h2>{items}</section>'
+    return (
+        f'<section id="awards" class="section awards"><h2>{section["title"]}</h2>{items}</section>'
+    )
 
 
 def _references(section):
@@ -113,7 +159,10 @@ def _references(section):
         f'<a href="mailto:{item["email"]}">{item["email"]}</a></p>'
         for item in section["items"]
     )
-    return f'<section id="references" class="section references"><h2>{section["title"]}</h2>{items}</section>'
+    return (
+        '<section id="references" class="section references">'
+        f'<h2>{section["title"]}</h2>{items}</section>'
+    )
 
 
 def generate_html(data, filename):
@@ -166,8 +215,13 @@ def generate_html(data, filename):
         f.write(html)
 
 
-with open("content.json", encoding="utf-8") as f:
-    content = json.load(f)
+def main():
+    with open("content.json", encoding="utf-8") as f:
+        content = json.load(f)
 
-generate_html(content["en"], "index.html")
-generate_html(content["zh"], "index-zh.html")
+    generate_html(content["en"], "index.html")
+    generate_html(content["zh"], "index-zh.html")
+
+
+if __name__ == "__main__":
+    main()
