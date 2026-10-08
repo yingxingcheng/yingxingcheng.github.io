@@ -44,4 +44,5 @@ jobs:
         with:
           name: layout-screenshots
           path: .layout-checks/
-          if-no-files-found: ignore
+          include-hidden-files: true
+          if-no-files-found: error
