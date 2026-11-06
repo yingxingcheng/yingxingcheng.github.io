@@ -2,7 +2,8 @@ name: Monthly publication update
 
 on:
   schedule:
-    - cron: '17 6 1 * *'  # 1st of every month at 06:17 UTC, away from the hourly peak
+    # Retry missed/failed monthly checks on later days, away from the hourly peak.
+    - cron: '17 6 * * *'
   workflow_dispatch:
 
 permissions:
@@ -30,16 +31,29 @@ jobs:
         with:
           python-version: '3.12'
 
+      - name: Decide whether this month's publication check is due
+        id: due
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+        run: |
+          due=$(python check_publication_due.py --event "$EVENT_NAME")
+          echo "due=$due" >> "$GITHUB_OUTPUT"
+          echo "Publication check due: $due" >> "$GITHUB_STEP_SUMMARY"
+
       - name: Install dependencies
+        if: steps.due.outputs.due == 'true'
         run: python -m pip install -r requirements.txt
 
       - name: Run regression tests
+        if: steps.due.outputs.due == 'true'
         run: python -m unittest discover -s tests -v
 
       - name: Check ORCID and Crossref for new journal publications
+        if: steps.due.outputs.due == 'true'
         run: python update_publications.py
 
       - name: Regenerate both languages
+        if: steps.due.outputs.due == 'true'
         run: python generate_html.py
 
       - name: Commit and push only if changed
