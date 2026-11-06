@@ -1,12 +1,12 @@
 {
-    "last_successful_check": "2026-10-08",
+    "last_successful_check": "2026-11-06",
     "orcid": "0000-0002-0209-7147",
     "source_counts": {
-        "orcid": 12,
-        "crossref": 8
+        "orcid": 13,
+        "crossref": 9
     },
     "publication_counts": {
-        "en": 12,
-        "zh": 12
+        "en": 13,
+        "zh": 13
     }
 }
