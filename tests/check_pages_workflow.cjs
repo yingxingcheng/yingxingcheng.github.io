@@ -2,6 +2,27 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const source = fs.readFileSync('.github/workflows/monthly-build.yml', 'utf8');
+// Keep the monthly gate inside the serialized update job. The commit output
+// and publish job must also run after a no-op check to recover failed builds.
+assert.match(source, /cron: '17 6 \* \* \*'/);
+assert.match(source, /group: publication-updates\n  cancel-in-progress: false/);
+assert.match(source, /if: github\.ref == format\('refs\/heads\/\{0\}', github\.event\.repository\.default_branch\)/);
+assert.match(source, /due=\$\(python check_publication_due\.py --event "\$EVENT_NAME"\)/);
+const update = source.split('\n  update:\n')[1].split('\n  publish:\n')[0];
+const gatedSteps = update.split('\n      - name: ').slice(1);
+for (const name of ['Install dependencies', 'Run regression tests',
+  'Check ORCID and Crossref for new journal publications', 'Regenerate both languages']) {
+  const step = gatedSteps.find(step => step.startsWith(name + '\n'));
+  assert.ok(step, `Missing step: ${name}`);
+  assert.match(step, /if: steps\.due\.outputs\.due == 'true'/);
+}
+const commitStep = gatedSteps.find(step => step.startsWith('Commit and push only if changed\n'));
+assert.ok(commitStep);
+assert.doesNotMatch(commitStep, /\n\s+if:/);
+assert.match(commitStep, /echo "sha=\$\(git rev-parse HEAD\)" >> "\$GITHUB_OUTPUT"/);
+const publish = source.split('\n  publish:\n')[1];
+assert.match(publish, /needs: update/);
+assert.doesNotMatch(publish, /steps\.due|\n\s+if:/);
 const script = source.split('          script: |\n')[1]
   .split('\n').map(line => line.startsWith('            ') ? line.slice(12) : line).join('\n');
 const AsyncFunction = Object.getPrototypeOf(async function () {}).constructor;

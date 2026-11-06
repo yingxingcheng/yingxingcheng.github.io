@@ -92,19 +92,25 @@ schedule inactivity. It is not updated on a failed check.
 
 ### Monthly workflow and permissions
 
-The **Monthly publication update** workflow runs on the first day of each month
-at 06:17 UTC and can be run manually on the default branch. It tests the code,
-refreshes publications, regenerates both pages, and commits only changed data,
-pages, or the successful-check record. Concurrent refreshes are serialized;
+The **Monthly publication update** workflow wakes daily at 06:17 UTC on the
+default branch. It checks the audit record first and refreshes publications only
+if the current UTC month has not yet completed a successful check. This targets
+the first day of each month while catching up on later days if a scheduled run
+is missed or a source check fails. Manual runs always perform a fresh check.
+
+When a check is due, it tests the code, refreshes publications, regenerates both
+pages, and commits only changed data, pages, or the successful-check record.
+Otherwise it skips those steps. Every run still verifies the expected Pages
+commit and requests a build only if needed, so a publishing failure can recover
+without repeating that month's source check. Concurrent refreshes are serialized;
 pushes never force-overwrite another commit.
 
-The proposed workflow uses two narrowly scoped jobs:
+The workflow uses two narrowly scoped jobs:
 
 - `update`: `contents: write` to commit generated files to the default branch
 - `publish`: `pages: write` to request the existing branch-based GitHub Pages
   build and verify that the expected commit finishes building
 
-These job permissions take effect when this workflow is approved and merged.
 No personal access token, repository permission-setting change, new secret, or
 change to the current Pages source is required. Branch protection or organization
 policy may still prohibit direct bot commits; do not relax protections to bypass
@@ -118,9 +124,12 @@ previous publish failure even when the next refresh has no diff.
 Public scheduled workflows can be [disabled after 60 days without repository activity](https://docs.github.com/en/actions/how-tos/manage-workflow-runs/disable-and-enable-workflows).
 If no run appears, inspect the Actions page and re-enable the workflow if GitHub
 shows it as inactive. Changing the cron expression on an approved merge can also
-reactivate an inactive schedule. After merging this fix, verify that the schedule
-is active, run it manually on `main`, and check that its publication and Pages
-jobs both finish successfully. A tested draft PR alone does not verify production
+reactivate an inactive schedule. GitHub can [delay or drop scheduled runs](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#schedule);
+daily catch-up reduces the impact of a missed trigger but cannot guarantee delivery.
+After a workflow change is merged, verify that the schedule is active, run it
+manually on `main`, and check that its publication and Pages jobs both finish
+successfully. Also observe a real `schedule` event: a manual run proves the jobs,
+not automatic triggering. A tested draft PR alone does not verify production
 automation or change the live website.
 
 ### Tests
