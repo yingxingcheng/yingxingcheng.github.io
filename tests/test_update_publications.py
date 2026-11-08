@@ -228,6 +228,21 @@ class SourcesTest(unittest.TestCase):
 
 
 class UpdateTest(unittest.TestCase):
+    @patch.object(
+        updater, "fetch_crossref_works", return_value={"10.1234/old": metadata("10.1234/old")}
+    )
+    @patch.object(updater, "fetch_orcid_dois", return_value={"10.1234/old"})
+    def test_curated_author_correction_is_preserved_when_sources_differ(self, *_):
+        original = content()
+        for lang in ("en", "zh"):
+            citation = original[lang]["sections"]["publications"]["items"][0]
+            citation["authors"] = "First Author, Corrected Coauthor, and Last Author"
+        snapshot = copy.deepcopy(original)
+        result, counts, _ = updater.update_content(original, Mock())
+        self.assertEqual(original, snapshot)
+        self.assertEqual(result, snapshot)
+        self.assertEqual(counts, {"en": 0, "zh": 0})
+
     @patch.object(updater, "fetch_crossref_works", return_value={DOI: metadata()})
     @patch.object(updater, "fetch_orcid_dois", return_value={DOI, "10.1234/old"})
     def test_addition_in_both_languages_preserves_curated_and_is_idempotent(self, *_):
